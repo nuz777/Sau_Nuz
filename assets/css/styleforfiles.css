@@ -11,7 +11,7 @@ body {
     font-family: 'Inter', sans-serif;
     background: 
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-        url("/assets/img/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner\ \(1\)\ \(1\).jpg");
+        url("../img/abstract-luxury-gradient-blue-background-smooth.jpg");
     
     background-size: cover;
     background-position: center;
@@ -19,6 +19,19 @@ body {
 
     color: #eaeaea;
 }
+
+
+/* FIX MOBILE */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
 /* HEADER */
 header {
     position: fixed;
