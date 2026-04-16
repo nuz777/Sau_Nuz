@@ -3,223 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Archivos de juegos</title>
+    <title>Lenguajes de Programación</title>
     <link rel="icon" href="assets/img/favicon1.jpg" />
-
     <link rel="stylesheet" href="/assets/css/styleforfiles.css" />
-
-    <style>
-      .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.068);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.3s;
-      }
-
-      .modal.active {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .modal-content {
-        background: #000000d7;
-        padding: 40px;
-        border-radius: 15px;
-        width: 350px; /* más ancho */
-        max-height: 80vh;
-        overflow-y: auto;
-        line-height: 1.5;
-      }
-
-      .modal-content p {
-        font-size: 14px;
-        color: #ccc;
-        text-align: left;
-        margin: 10px 0;
-      }
-
-      .modal-content h2 {
-        margin: 10px 0;
-      }
-
-      .modal-content strong {
-        color: #fff;
-      }
-
-      .modal.active .modal-content {
-        transform: scale(1);
-      }
-
-      .close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        font-size: 30px;
-        cursor: pointer;
-        color: white;
-      }
-
-      .download-btn {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 10px 15px;
-        background: #00c853;
-        color: white;
-        border-radius: 8px;
-        text-decoration: none;
-      }
-
-      .modal-img {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 10px;
-        max-height: 200px;
-        object-fit: cover;
-      }
-    </style>
   </head>
 
   <body>
     <header>
-      <h1>Archivos - Games</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-        </ul>
-      </nav>
+      <h1>Lenguajes de Programación</h1>
+      <div style="text-align: right; margin: 1px">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar lenguaje..."
+          style="
+            padding: 10px;
+            width: 250px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background: #111;
+            color: white;
+          "
+        />
+      </div>
     </header>
 
     <main>
       <section class="mascotas-grid">
+
         <div class="card fade-in" onclick="openModal('m1')">
-          <img src="/assets/img/dirt2.0.jpg" />
-          <h3>Dirt Rally 2.0</h3>
-          <p>70 GB</p>
+          <img src="/assets/img/js.jpg" />
+          <h3>JavaScript</h3>
+          <p>Lenguaje web</p>
         </div>
 
         <div class="card fade-in" onclick="openModal('m2')">
-          <img src="/assets/img/dfn.jpg" />
-          <h3>DNF Duel</h3>
-          <p>12 GB</p>
+          <img src="/assets/img/python.jpg" />
+          <h3>Python</h3>
+          <p>Fácil y potente</p>
         </div>
 
         <div class="card fade-in" onclick="openModal('m3')">
-          <img src="/assets/img/GOTATWAR.jpg" />
-          <h3>Dios de la Guerra: Ragnarok</h3>
-          <p>69 GB</p>
+          <img src="/assets/img/java.jpg" />
+          <h3>Java</h3>
+          <p>Multiplataforma</p>
         </div>
 
         <div class="card fade-in" onclick="openModal('m4')">
-          <img src="public/img/imagen(6).jpg" />
-          <h3>Conejo</h3>
-          <p>Mascota tranquila, tierna y fácil de cuidar.</p>
+          <img src="/assets/img/cpp.jpg" />
+          <h3>C++</h3>
+          <p>Alto rendimiento</p>
         </div>
 
         <div class="card fade-in" onclick="openModal('m5')">
-          <img src="public/img/images ().jpg " />
-          <h3>Perico</h3>
-          <p>Ave alegre, colorida y muy interactiva.</p>
+          <img src="/assets/img/html.jpg" />
+          <h3>HTML</h3>
+          <p>Estructura web</p>
         </div>
 
         <div class="card fade-in" onclick="openModal('m6')">
-          <img src="public/img/imghamster.jpg" />
-          <h3>Hamster</h3>
-          <p>Pequeño, activo y muy entretenido.</p>
+          <img src="/assets/img/css.jpg" />
+          <h3>CSS</h3>
+          <p>Diseño web</p>
         </div>
+
       </section>
 
       <a href="/index.html" class="btn-volver">Volver</a>
     </main>
 
-    <!-- 🔥 MODALES (solo agregados) -->
+    <!-- MODALES -->
 
     <div class="modal" id="m1">
       <div class="modal-content">
         <span class="close" onclick="closeModal('m1')">&times;</span>
-        <img src="/assets/img/dirt2.0.jpg" class="modal-img" />
-        <h2>Juego 1</h2>
+        <h2>JavaScript</h2>
         <p>
-          DiRT Rally 2.0 es un simulador de carreras realista lanzado en 2019.
-          Desarrollado por Codemasters, el juego desafía a los jugadores a
-          dominar vehículos todoterreno en icónicas rutas de rally (Argentina,
-          España, Nueva Zelanda, etc.) y circuitos de la FIA World Rallycross,
-          enfocándose en la conducción auténtica, la física detallada y la
-          degradación de superficies.
+          Lenguaje de programación esencial para el desarrollo web. Permite crear
+          interactividad en páginas, manejar eventos, animaciones y trabajar tanto
+          en el frontend como en el backend con Node.js.
         </p>
-        <p><strong>Peso:</strong> 70 GB</p>
-        <a href="#" class="download-btn">Descargar</a>
       </div>
     </div>
 
     <div class="modal" id="m2">
       <div class="modal-content">
         <span class="close" onclick="closeModal('m2')">&times;</span>
-        <img src="/assets/img/dfn.jpg" class="modal-img" />
-        <h2>DNF duel</h2>
+        <h2>Python</h2>
         <p>
-          Dungeon Fighter Duel es un juego de lucha en 2D basado en el universo
-          de Dungeon Fighter Online, donde cada personaje cuenta con habilidades
-          únicas, ataques especiales y estilos de combate distintos. El juego
-          destaca por sus gráficos estilo anime, animaciones fluidas y combates
-          dinámicos que combinan acción rápida con estrategia. Incluye una
-          variedad de personajes inspirados en clases clásicas como Slayer,
-          Ranger, Striker y más, cada uno con su propio conjunto de movimientos
-          y combos. Su sistema de combate es accesible para principiantes, pero
-          también ofrece profundidad para jugadores avanzados que buscan dominar
-          técnicas complejas.
+          Lenguaje fácil de aprender y muy versátil. Se usa en desarrollo web,
+          inteligencia artificial, análisis de datos, automatización y más.
         </p>
-        <p><strong>Peso:</strong> 12 GB</p>
-        <a href="#" class="download-btn">Descargar</a>
       </div>
     </div>
 
     <div class="modal" id="m3">
       <div class="modal-content">
         <span class="close" onclick="closeModal('m3')">&times;</span>
-        <img src="/assets/img/GOTATWAR.jpg" class="modal-img" />
-        <h2>GOT AT WAR</h2>
-        <p>Descripción del archivo.</p>
-        <p><strong>Peso:</strong> 69 GB</p>
-        <a href="#" class="download-btn">Descargar</a>
+        <h2>Java</h2>
+        <p>
+          Lenguaje robusto y multiplataforma. Muy usado en aplicaciones
+          empresariales, desarrollo Android y sistemas grandes.
+        </p>
       </div>
     </div>
 
     <div class="modal" id="m4">
       <div class="modal-content">
         <span class="close" onclick="closeModal('m4')">&times;</span>
-        <img src="/assets/img" class="modal-img" />
-        <h2>Juego 4</h2>
-        <p>Descripción del archivo.</p>
-        <p><strong>Peso:</strong> 15 GB</p>
-        <a href="#" class="download-btn">Descargar</a>
+        <h2>C++</h2>
+        <p>
+          Lenguaje de alto rendimiento utilizado en videojuegos, sistemas
+          operativos y software que requiere velocidad y control de memoria.
+        </p>
       </div>
     </div>
 
     <div class="modal" id="m5">
       <div class="modal-content">
         <span class="close" onclick="closeModal('m5')">&times;</span>
-        <h2>Juego 5</h2>
-        <p>Descripción del archivo.</p>
-        <p><strong>Peso:</strong> 5 GB</p>
-        <a href="#" class="download-btn">Descargar</a>
+        <h2>HTML</h2>
+        <p>
+          Lenguaje de marcado que define la estructura de las páginas web.
+          Es la base de cualquier sitio web.
+        </p>
       </div>
     </div>
 
     <div class="modal" id="m6">
       <div class="modal-content">
         <span class="close" onclick="closeModal('m6')">&times;</span>
-        <h2>Juego 6</h2>
-        <p>Descripción del archivo.</p>
-        <p><strong>Peso:</strong> 2 GB</p>
-        <a href="#" class="download-btn">Descargar</a>
+        <h2>CSS</h2>
+        <p>
+          Lenguaje de estilos que permite diseñar y dar apariencia a páginas web.
+          Controla colores, layouts, animaciones y diseño responsive.
+        </p>
       </div>
     </div>
 
@@ -255,6 +174,23 @@
           }
         });
       };
+
+      const searchInput = document.getElementById("searchInput");
+      const cards = document.querySelectorAll(".card");
+
+      searchInput.addEventListener("keyup", function () {
+        const value = this.value.toLowerCase();
+
+        cards.forEach((card) => {
+          const title = card.querySelector("h3").textContent.toLowerCase();
+
+          if (title.includes(value)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
     </script>
   </body>
 </html>

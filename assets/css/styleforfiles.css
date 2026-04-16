@@ -39,7 +39,7 @@ header {
     transition: background 0.3s ease;
 }
 
-/* EFECTO SCROLL 🔥 */
+
 header.scrolled {
     background: rgba(0, 0, 0, 0.9);
 }
@@ -66,7 +66,7 @@ nav a:hover {
     color: #fff;
 }
 
-/* MAIN (FIX REAL DEL PROBLEMA 👇) */
+
 main {
     max-width: 1000px;
     margin: 0 auto;
@@ -83,87 +83,6 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* SOBRE MI */
-.sobre-mi {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.perfil-img {
-    width: 160px;
-    border-radius: 50%;
-}
-
-.info {
-    max-width: 500px;
-}
-
-#typing {
-    color: #888;
-    margin: 10px 0;
-}
-
-/* PROYECTOS */
-#proyectos ul {
-    list-style: none;
-}
-
-#proyectos li {
-    padding: 15px;
-    border-bottom: 1px solid #222;
-    transition: 0.3s;
-}
-
-#proyectos li:hover {
-    background: #111;
-}
-
-#proyectos a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-/* FORMULARIO */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-input, textarea {
-    background: #111;
-    border: 1px solid #222;
-    padding: 10px;
-    color: white;
-    border-radius: 4px;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #555;
-}
-
-button {
-    background: #fff;
-    color: #000;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #ddd;
-}
-
-/* MENSAJE */
-#mensaje-exito {
-    display: none;
-    margin-top: 10px;
-    color: #4ade80;
-}
 
 /* FOOTER */
 footer {
@@ -176,7 +95,7 @@ footer {
 /* MASCOTAS GRID */
 .mascotas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -227,10 +146,19 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-}
 
-header.scrolled {
-    background: rgba(0, 0, 0, 0.9);
+
+    header.scrolled {
+        background: rgba(0, 0, 0, 0.9);
+    }
+        /* 🔥 AQUÍ EL CAMBIO */
+        .mascotas-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .card img {
+            height: 150px;
+        }
 }
 
 
