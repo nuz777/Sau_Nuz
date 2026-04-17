@@ -1336,6 +1336,7 @@ h3{
 /* Sections background: Quote */
 .section-quote {
   background: url(../img/8077616.png) center no-repeat fixed;
+  display: flex;
 }
 
 .section-quote p {
@@ -1350,6 +1351,8 @@ h3{
 /* Sections background: Me */
 .section-me {
   background: url(../img/ultimaimagen.png) center no-repeat fixed;
+  display: flex;
+  
 }
 
 .section-me h2 {
