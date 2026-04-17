@@ -1222,8 +1222,14 @@ html, body {
   margin: 10px 0 0;
   font-size: 12px;
   font-weight: 300;
-  color: #bbbbbb;
+
 }
+
+h3{
+  color:white;
+}
+
+
 
 .portfolio-item:hover .portfolio-item-thumb {
   transform: translateY(-75px);
