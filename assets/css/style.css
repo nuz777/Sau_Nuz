@@ -60,6 +60,7 @@ html, body {
   padding: 0;
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
+  
 
 }
 
@@ -340,6 +341,9 @@ html, body {
 /* Navigation */
 .site-navigation {
   background-color: #000000;
+ position: sticky;
+  top: 0;
+  z-index: 50000;
 }
 
 .site-navigation.affix {
@@ -458,12 +462,13 @@ html, body {
 /* HERO
 ================================================== */
 .hero {
-  background: url(../img/imgemcabezado.jpg) center no-repeat;
+  background: url(../img/67856-ezgif.com-video-to-gif-converter.gif) center no-repeat;
   height: 100%;
   width: 100%;
   display: table;
   position: relative;
   background-size: cover;
+  overflow: visible;
 }
 
 .background-overlay:before {
