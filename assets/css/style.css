@@ -344,7 +344,14 @@ html, body {
   background-color: #000000;
  position: sticky;
   top: 0;
-  z-index: 50000;
+  left: 0;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 9999;
+}
+
+.site-navigation.show {
+  top: 0;
 }
 
 .site-navigation.affix {
@@ -638,6 +645,8 @@ html, body {
  */
 .site-section {
   padding: 100px 0;
+  scroll-margin-top: 1200px;
+
 }
 
 .site-section h2 {

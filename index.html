@@ -397,14 +397,14 @@
       <!-- End History section -->
 
       <!-- Portfolio/Works section -->
-      <section class="site-section section-works" id="works">
+      <section class="site-section section-works">
         <div class="container">
           <h2>SN-TOOLS</h2>
           <p class="section-subtitle">
             <span> <strong>Aqui tienes unas recomendaciones de sitios (propios) de nuestras SN-TOOLS</strong>  </span>
           </p>
 
-          <div class="portfolio">
+          <div class="portfolio" id="works">
             <ul class="portfolio-sorting list-inline">
               <li><a href="#" class="active" data-group="all"><strong>todo</strong></a></li>
               <li>
@@ -769,7 +769,22 @@
     }
   });
 </script>
-</script>
-    
+
+<script>
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".site-navigation");
+  let currentScroll = window.pageYOffset;
+
+  if (currentScroll > 100) {
+    nav.classList.add("show");
+  } else {
+    nav.classList.remove("show");
+  }
+
+  lastScroll = currentScroll;
+});
+    </script>
   </body>
 </html>
