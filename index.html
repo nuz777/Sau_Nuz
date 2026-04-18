@@ -770,21 +770,6 @@
   });
 </script>
 
-<script>
-let lastScroll = 0;
-
-window.addEventListener("scroll", () => {
-  const nav = document.querySelector(".site-navigation");
-  let currentScroll = window.pageYOffset;
-
-  if (currentScroll > 100) {
-    nav.classList.add("show");
-  } else {
-    nav.classList.remove("show");
-  }
-
-  lastScroll = currentScroll;
-});
-    </script>
+    
   </body>
 </html>
