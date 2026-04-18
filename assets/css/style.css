@@ -294,12 +294,13 @@ html, body {
 
 /* Image responsive */
 .img-res {
-  display: block;
+  display: flex;
   width: 100vw;
   height: 100vh;
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 /* HEADER
@@ -1450,8 +1451,12 @@ h3{
 /* MODALS 
 ================================================== */
 
+
+
 .modal-content{
-  background-color: #ffffff;
+  background-color: #000000;
+  color: #f6f6f6;
+  
 }
 .modal.fade-scale {
   transform: scale(0);
@@ -1460,11 +1465,13 @@ h3{
   -o-transition: all 0.25s linear;
   -moz-transition: all 0.25s linear;
   transition: all 0.25s linear;
+  border-radius: 30px;
 }
 
 .modal.fade-scale.in {
   opacity: 1;
   transform: scale(1);
+  border-radius: 20px;
 }
 
 .modal.fade-scale .modal-dialog {
@@ -1482,6 +1489,7 @@ h3{
 
 .modal-header {
   height: 400px;
+  border-radius: 20px;
 }
 
 .modal-header .rectangle {
@@ -1490,17 +1498,19 @@ h3{
   top: -20px;
   height: 40px;
   width: 40px;
-  background-color: #196fc2;
+  background-color: #1261ac;
   color: #ffffff;
   box-shadow: none;
   border: 0;
   opacity: 1;
+
 }
 
 .modal-header .rectangle:hover {
   background-color: #ffffff;
-  color: #196fc2;
+  color: #0a3b69;
   border-color: #196fc2;
+  
 }
 
 .modal-header,
@@ -1515,25 +1525,26 @@ h3{
 }
 
 .modal-footer .btn:hover {
-  background-color: #ffffff;
-  color: #196fc2;
+  background-color: #acd0ff;
+  color: #083f72;
   border-color: #196fc2;
 }
 
 .modal-content {
-  padding: 0;
-  border-radius: 0;
+  padding: 20;
+  border-radius: 30px;
   border: 0;
 }
 
 .modal-content p {
   margin: 15px 0 0;
-  color: #000;
+  color: #ffffff;
 }
 
 .modal-content .btn {
   width: 100%;
   border-width: 1px 0 0 0;
+  border-radius:  10px;
 }
 
 @media only screen and (max-width: 767px) {

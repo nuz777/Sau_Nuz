@@ -61,6 +61,10 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/modal-intro.css" />
+
+
+
 
   </head>
   <body>
@@ -217,10 +221,10 @@
       <!-- End Quote section -->
 
       <!-- About section -->
-      <section class="site-section section-about text-center" id="about">
+      <section class="site-section section-about text-center">
   <div class="container">
     <h2>Sobre SauNuz</h2>
-    <p class="section-subtitle">
+    <p class="section-subtitle" >
       <span>Herramientas, desarrollo y soluciones en un solo lugar</span>
     </p>
 
@@ -231,7 +235,7 @@
             <i class="fa fa-download" aria-hidden="true"></i>
           </div>
           <h3>Tools & Software</h3>
-          <p>
+          <p id="about">
             En SauNuz ofrecemos herramientas, sistemas operativos y software
             optimizado para facilitar instalaciones, mantenimiento y uso diario
             en equipos de todo tipo.
@@ -292,7 +296,7 @@
 
       
       <!-- Team section -->
-      <section class="site-section section-team" id="team">
+      <section class="site-section section-team" >
         <div class="container">
           <h2>Nuestro equipo </h2>
           <p class="section-subtitle">
@@ -306,7 +310,7 @@
                 <div class="team-member">
                   <div class="flipper">
                     <div class="team-member-front">
-                      <div class="team-member-thumb">
+                      <div class="team-member-thumb"id="team">
                         <img
                           src="assets/img/Nuz.jpg"
                           class="img-res"
@@ -651,11 +655,12 @@
           </div> 
           <div class="modal-body">
           <h4 class="modal-title">Juegos pesados</h4>
-          
+          <p>
             En esta sección encontrarás juegos de alto rendimiento con gráficos avanzados y gran realismo. 
             Ideales para PCs potentes, aquí podrás descargar y explorar títulos exigentes optimizados 
             para una mejor experiencia. Recomendado para usuarios con buen hardware.
            <a  href="https://www.blizzboygames.net/">fuentes </a> 
+          </p>
           </div>
           <div class="modal-footer">
             <a href="assets/pages/juegos.html" target="_blank" class="btn">Visitar sitio</a>
@@ -723,7 +728,48 @@
     <script src="assets/js/script.js"></script>
 
 
+<div class="modal" id="introModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('introModal')">&times;</span>
+    <h2>Bienvenido ^w^</h2>
+    <img src="./assets/img/pngegg.png" class="modal-img" />
+    <p>
+      Aquí puedes descargar juegos gratis.  
+      Haz clic en cualquier tarjeta para ver detalles y descargar.
+      Recuerda leer el manual =]
+    </p>
+    <p>
+      ⚠️ Este proyecto sigue en fase alpha, paciencia por fis.
+    </p>
+    <button class="download-btn" onclick="closeModal('introModal')">
+      Entendido
+    </button>
+  </div>
+</div>
 
+<script>
+  // abrir modal
+  function openModal(id) {
+    document.getElementById(id).classList.add("active");
+  }
+  // cerrar modal
+  function closeModal(id) {
+    document.getElementById(id).classList.remove("active");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // 🔥 para probar (borra después)
+    localStorage.removeItem("introVisto");
+
+    if (!localStorage.getItem("introVisto")) {
+      setTimeout(() => {
+        openModal("introModal");
+        localStorage.setItem("introVisto", "true");
+      }, 500);
+    }
+  });
+</script>
+</script>
     
   </body>
 </html>
