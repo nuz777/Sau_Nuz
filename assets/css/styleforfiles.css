@@ -268,10 +268,4 @@ footer {
         height: 140px;
     }
 
-    /* 🔥 menos animaciones en móvil */
-    .fade-in {
-        transform: none;
-        opacity: 1;
-        transition: none;
-    }
 }
