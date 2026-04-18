@@ -1003,6 +1003,7 @@ html, body {
   -o-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
   z-index: 5;
+  border-radius: 20px;
 }
 
 .team-member .team-member-back .team-member-info {
@@ -1380,7 +1381,7 @@ h3{
 ================================================== */
 .site-footer .container-fluid {
   position: relative;
-  padding: 100px 15px;
+  padding: 100px 100px;
   text-align: center;
   border-bottom: 1px solid #dddddd;
 }
