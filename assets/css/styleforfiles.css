@@ -268,4 +268,9 @@ footer {
         height: 140px;
     }
 
+    .fade-in {
+        transform: none;
+        opacity: 1;
+        transition: none;
+    }
 }
