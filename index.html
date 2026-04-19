@@ -63,11 +63,9 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/modal-intro.css" />
 
-
-
-
   </head>
   <body>
+
     <!-- Hero Section, Background Image change in css -->
     <div id="top" class="hero background-overlay">
       <!-- Name & Description -->
@@ -91,7 +89,7 @@
 
     <!-- Header -->
     <header id="masthead" class="site-header">
-      <nav id="primary-navigation" class="site-navigation" data-spy="affix">
+      <nav id="primary-navigation" class="site-navigation">
         <div class="container">
           <div class="navbar-header page-scroll">
             <button
@@ -221,7 +219,7 @@
       <!-- End Quote section -->
 
       <!-- About section -->
-      <section class="site-section section-about text-center">
+      <section class="site-section section-about text-center" id="about">
   <div class="container">
     <h2>Sobre SauNuz</h2>
     <p class="section-subtitle" >
@@ -235,7 +233,7 @@
             <i class="fa fa-download" aria-hidden="true"></i>
           </div>
           <h3>Tools & Software</h3>
-          <p id="about">
+          <p >
             En SauNuz ofrecemos herramientas, sistemas operativos y software
             optimizado para facilitar instalaciones, mantenimiento y uso diario
             en equipos de todo tipo.
@@ -288,15 +286,8 @@
   </div>
 </section>
       
-      
-        </div>
-  
-      <!-- /.section-counters -->
-      <!-- End Counters section -->
-
-      
       <!-- Team section -->
-      <section class="site-section section-team" >
+      <section class="site-section section-team" id="team">
         <div class="container">
           <h2>Nuestro equipo </h2>
           <p class="section-subtitle">
@@ -310,7 +301,7 @@
                 <div class="team-member">
                   <div class="flipper">
                     <div class="team-member-front">
-                      <div class="team-member-thumb"id="team">
+                      <div class="team-member-thumb", >
                         <img
                           src="assets/img/Nuz.jpg"
                           class="img-res"
@@ -383,28 +374,22 @@
               </div>
             </div>
           </div>
-          <!-- /.team -->
         </div>
-      
-      <!-- /.section-team -->
-      <!-- End Team section -->
-
-     
-          <!-- /.timeline -->
-        </div>
+      </div> 
+    
       
       <!-- /.section-history -->
       <!-- End History section -->
 
       <!-- Portfolio/Works section -->
-      <section class="site-section section-works">
+      <section class="site-section section-works" id="works">
         <div class="container">
           <h2>SN-TOOLS</h2>
           <p class="section-subtitle">
             <span> <strong>Aqui tienes unas recomendaciones de sitios (propios) de nuestras SN-TOOLS</strong>  </span>
           </p>
 
-          <div class="portfolio" id="works">
+          <div class="portfolio" >
             <ul class="portfolio-sorting list-inline">
               <li><a href="#" class="active" data-group="all"><strong>todo</strong></a></li>
               <li>
@@ -629,20 +614,16 @@
   </div>
 </div>
 
+
 <script>
-  // abrir modal
   function openModal(id) {
     document.getElementById(id).classList.add("active");
   }
-  // cerrar modal
   function closeModal(id) {
     document.getElementById(id).classList.remove("active");
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    // 🔥 para probar (borra después)
-    localStorage.removeItem("introVisto");
-
     if (!localStorage.getItem("introVisto")) {
       setTimeout(() => {
         openModal("introModal");
@@ -651,7 +632,5 @@
     }
   });
 </script>
-
-    
   </body>
 </html>

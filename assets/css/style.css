@@ -59,10 +59,9 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  overflow-x: hidden;
-  
 
 }
+
 
 /* 
  * Background colors 
@@ -307,6 +306,10 @@ html, body {
 ================================================== */
 .site-header {
   height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 50000;
+
 }
 
 .site-logo {
@@ -347,13 +350,6 @@ html, body {
   z-index: 50000;
 }
 
-.site-navigation.affix {
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 1005;
-}
 
 .site-navigation .navbar-nav {
   padding-top: 23px;
