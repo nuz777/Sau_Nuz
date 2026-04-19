@@ -9,21 +9,11 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: 
-        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-        url("../img/abstract-luxury-gradient-blue-background-smooth.jpg");
-    
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
+    background: black;
     color: #eaeaea;
 }
 
 /* 🔥 MEJOR PERFORMANCE GENERAL */
-* {
-    -webkit-tap-highlight-color: transparent;
-}
 
 html {
     scroll-behavior: smooth;
@@ -266,11 +256,5 @@ footer {
     
     .card img {
         height: 140px;
-    }
-
-    .fade-in {
-        transform: none;
-        opacity: 1;
-        transition: none;
     }
 }
