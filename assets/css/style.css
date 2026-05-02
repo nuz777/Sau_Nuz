@@ -1,11 +1,50 @@
 .hero-content {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(-799px);
   animation: fadeUp 1s ease forwards;
+
+  text-align: center; 
 }
 
+@media only screen and (max-width: 412px) {
+  .hero-content {
+     opacity: 0;
+      transform: translateY(-799px);
+      animation: fadeUp 1s ease forwards;
+      text-align: left;
+
+}
+}
+
+/* H1 */
 .hero-content h1 {
-  animation-delay: 0.2s;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 48px;
+  color: #00a2ff;
+
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #00a2ff;
+
+  width: 0;
+  transform: translateX(-20px);
+
+  animation:
+    fadeUp 1s ease forwards,
+    typing 2.8s steps(30, end) forwards,
+    blink 0.7s step-end infinite;
+
+  animation-delay: 0.2s, 0.2s, 0s;
+}
+
+
+/* TEXTO */
+.hero-job,
+.hero-job-desc {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
 }
 
 .hero-job {
@@ -14,8 +53,12 @@
 
 .hero-job-desc {
   animation-delay: 0.6s;
+  font-family: 'Share Tech Mono', monospace;
+  color: #aaa;
+  text-align: center; /* 🔥 también centrado */
 }
 
+/* ANIMACIONES */
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -23,18 +66,23 @@
   }
 }
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 19ch; }
+}
+
+@keyframes blink {
+  0%, 100% {
+    border-color: rgba(0, 162, 255, 1);
+  }
+  50% {
+    border-color: rgba(0, 162, 255, 0);
+  }
+}
+/* GENERAL */
 p {
-color: #ffffff;
+  color: #ffffff;
 }
-  
-
-.hero-job,
-.hero-job-desc {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 1s ease forwards;
-}
-
 /* CUSTOM RESETS
 ================================================== */
 a, button {
@@ -58,8 +106,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
-
+  font-family: 'Share Tech Mono', monospace;
 }
 
 
@@ -306,10 +353,11 @@ html, body {
 ================================================== */
 .site-header {
   height: 60px;
-  position: sticky;
+  position: fixed; /* 🔥 cambiado para que SIEMPRE quede arriba */
   top: 0;
+  left: 0; /* 🔥 agregado */
+  width: 100%; /* 🔥 agregado */
   z-index: 50000;
-
 }
 
 .site-logo {
@@ -345,11 +393,12 @@ html, body {
 /* Navigation */
 .site-navigation {
   background-color: #000000;
- position: sticky;
+  position: fixed; /* 🔥 también fijo para que no se despegue */
   top: 0;
+  left: 0; /* 🔥 agregado */
+  width: 100%; /* 🔥 agregado */
   z-index: 50000;
 }
-
 
 .site-navigation .navbar-nav {
   padding-top: 23px;
@@ -389,7 +438,6 @@ html, body {
 }
 
 @media only screen and (max-width: 1199px) {
-  /* HEADER */
   .site-navigation .navbar-nav > li + li > a {
     margin-left: 15px;
   }
@@ -399,15 +447,12 @@ html, body {
 }
 
 @media only screen and (max-width: 991px) {
-  /* HEADER */
   .site-navigation .navbar-nav > li + li > a {
     margin-left: 8px;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  /* HEADER */
-  /* Navigation */
   .site-navigation .navbar-nav {
     padding-top: 0;
   }
@@ -454,6 +499,11 @@ html, body {
   .site-navigation .navbar-nav > li + li > a {
     margin-left: 0;
   }
+}
+
+/* 🔥 IMPORTANTE para que el header no tape contenido */
+body {
+  padding-top: 60px;
 }
 
 /* HERO
@@ -1350,7 +1400,7 @@ h3{
 
 /* Sections background: Me */
 .section-me {
-  background: url(../img/ultimaimagen.png) center no-repeat fixed;
+  background: url(../img/fotter.jpg) center no-repeat fixed;
   display: flex;
   
 }
@@ -1358,7 +1408,7 @@ h3{
 @media only screen and (max-width: 479px) {
   /* Section: Portfolio */
   .section-me {
-    background: url(../img/ultimaimagen.png) center no-repeat;
+    background: url(../img/celu.jpg) center no-repeat;
   }
 
   .section-quote {
@@ -1366,16 +1416,25 @@ h3{
 }
 }
 .section-me h2 {
+  font-family: 'Share Tech Mono', monospace;
   margin: 0;
   color: #ffffff;
   position: relative;
 }
+.section-me p {
+    font-family: 'Share Tech Mono', monospace;
+
+    color: #ffffff;
+   
+  }
+  
 
 
 
 /* FOOTER
 ================================================== */
 .site-footer .container-fluid {
+   
   position: relative;
   padding: 100px 100px;
   text-align: center;
