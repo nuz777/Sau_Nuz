@@ -106,7 +106,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Share Tech Mono', monospace;
+ font-family: 'Share Tech Mono', monospace;
 }
 
 
@@ -353,20 +353,25 @@ html, body {
 ================================================== */
 .site-header {
   height: 60px;
-  position: fixed; /* 🔥 cambiado para que SIEMPRE quede arriba */
+  position: fixed; /*  cambiado para que siempre quede arriba */
   top: 0;
-  left: 0; /* 🔥 agregado */
-  width: 100%; /* 🔥 agregado */
+  left: 0; /*  agregado */
+  width: 100%; /*  agregado */
   z-index: 50000;
+  border-radius: 30px;
 }
+
+
 
 .site-logo {
   display: inline-block;
   position: relative;
   padding: 0 30px 0 15px;
-  height: 60px;
+  height: 64px;
   background-color: #004b91;
   z-index: 2;
+  border-radius: 50px;
+ 
 }
 
 .site-logo:before {
@@ -377,6 +382,7 @@ html, body {
   top: 0;
   right: 0;
   background-color: #004b91;
+  
 }
 
 .site-logo a {
@@ -392,22 +398,30 @@ html, body {
 
 /* Navigation */
 .site-navigation {
-  background-color: #000000;
-  position: fixed; /* 🔥 también fijo para que no se despegue */
+  position: fixed;
   top: 0;
-  left: 0; /* 🔥 agregado */
-  width: 100%; /* 🔥 agregado */
+  left: 0;
+  width: 100%;
   z-index: 50000;
+
+  background: rgba(0, 0, 0, 90); /* 🔥 más sólido al inicio */
+  transition: all 0.3s ease;
 }
 
+/* 🔥 cuando haces scroll */
+.site-navigation.scrolled {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
 .site-navigation .navbar-nav {
-  padding-top: 23px;
+  padding-top: 24px;
 }
 
 .site-navigation .navbar-nav > li > a {
-  padding: 0px 3px 21px;
+  padding: 0px 3px 18px;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 22px;
   color: #ffffff;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
@@ -464,7 +478,7 @@ html, body {
   }
   .site-navigation .navbar-toggle .icon-bar {
     position: relative;
-    background-color: #fff;
+    background-color: #376fc2;
     transition: top 0.25s ease-in-out;
     -moz-transition: top 0.25s ease-in-out;
     -webkit-transition: top 0.25s ease-in-out;
@@ -482,9 +496,11 @@ html, body {
   }
   .site-navigation .navbar-collapse {
     position: relative;
-    background-color: #000000;
+    background: rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
     z-index: 99;
-    text-align: center;
+    text-align: left;
     border-top: 0;
     box-shadow: none;
   }
@@ -492,7 +508,7 @@ html, body {
     margin: 0;
   }
   .site-navigation .navbar-nav > li > a {
-    display: inline-block;
+    display: right;
     margin: 10px 0;
     padding-bottom: 5px;
   }
@@ -501,10 +517,7 @@ html, body {
   }
 }
 
-/* 🔥 IMPORTANTE para que el header no tape contenido */
-body {
-  padding-top: 60px;
-}
+
 
 /* HERO
 ================================================== */
@@ -527,6 +540,7 @@ body {
   top: 0;
   left: 0;
   z-index: 0;
+  
 }
 
 .hero-content {
@@ -689,7 +703,7 @@ body {
 }
 
 .site-section h2 {
-  font-family: "Varela", sans-serif;
+  font-family: 'Share Tech Mono', monospace;
   margin: 0;
   font-size: 32px;
   color: #196fc2;
@@ -699,11 +713,11 @@ body {
 
 .section-subtitle {
   position: relative;
-  font-family: "Varela", sans-serif;
+  font-family: 'Share Tech Mono', monospace;
   margin: 15px 0 0;
   font-size: 16px;
   line-height: 16px;
-  color: #666;
+  color: #ffffff;
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
@@ -1433,79 +1447,107 @@ h3{
 
 /* FOOTER
 ================================================== */
+.site-footer {
+  background: #0a0a0a; /* 🔥 fondo oscuro pro */
+  color: #aaa;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .site-footer .container-fluid {
-   
   position: relative;
-  padding: 100px 100px;
+  padding: 80px 20px;
   text-align: center;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
+/* CONTENIDO */
 .site-footer .container {
-  padding: 70px 15px 100px;
+  padding: 60px 10px 40px; 
 }
 
+/* LISTA */
 .site-footer ul {
-  margin-bottom: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
 }
 
 .site-footer ul li {
-  padding: 0 10px;
+  display: inline-block;
+  padding: 0 15px;
 }
 
-.site-footer ul a {
-  font-size: 12px;
-  color: #666;
-  text-transform: uppercase;
-}
-
-.site-footer ul a:hover {
-  color: #196fc2;
-}
-
+/* LINKS */
+.site-footer ul a,
 .site-footer a {
-  font-size: 12px;
-  color: #666;
+  font-size: 13px;
+  color: #888;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
+/* 🔥 HOVER PRO */
+.site-footer ul a:hover,
 .site-footer a:hover {
-  color: #196fc2;
+  color: #00a2ff;
+  text-shadow: 0 0 8px rgba(0,162,255,0.6);
 }
 
+/* BOTÓN (flecha arriba) */
 .site-footer .rectangle {
   position: absolute;
   bottom: -20px;
   right: 0;
   left: 0;
   margin: 0 auto;
-  width: 40px;
-  height: 40px;
-  background-color: #000;
-  border: none;
-  color: #ffffff;
-  box-shadow: none;
+
+  width: 45px;
+  height: 45px;
+
+  background: rgba(0, 162, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+
+  color: #00a2ff;
+  border: 1px solid rgba(0,162,255,0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
 }
 
+/* 🔥 HOVER BOTÓN */
 .site-footer .rectangle:hover {
-  background-color: #196fc2;
-  color: #ffffff;
+  background: #00a2ff;
+  color: #000;
+  box-shadow: 0 0 15px rgba(0,162,255,0.6);
 }
 
+/* COPYRIGHT */
 .site-footer .copyright {
-  margin-bottom: 0;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #666;
 }
 
+/* RESPONSIVE */
 @media only screen and (max-width: 767px) {
-  /* FOOTER*/
   .site-footer .container-fluid {
     padding: 40px 15px;
   }
+
   .site-footer .container {
     padding: 40px 15px 80px;
   }
+
+  .site-footer ul li {
+    display: block;
+    padding: 8px 0;
+  }
 }
-
-
 
 

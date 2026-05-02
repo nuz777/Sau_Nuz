@@ -277,7 +277,7 @@
             <i class="fa fa-users" aria-hidden="true"></i>
           </div>
           <h3>Comunidad</h3>
-          <p>
+          <p  id="team">
             SauNuz busca ayudar a estudiantes y usuarios a acceder a recursos,
             aprender tecnología y mejorar sus habilidades en informática y
             desarrollo.
@@ -289,7 +289,7 @@
 </section>
       
       <!-- Team section -->
-      <section class="site-section section-team" id="team">
+      <section class="site-section section-team">
         <div class="container">
           <h2>Nuestro equipo </h2>
           <p class="section-subtitle">
@@ -621,6 +621,19 @@
       }, 500);
     }
   });
+
+
+
+
+  window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".site-navigation");
+
+  if (window.scrollY > 50) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
 </script>
   </body>
 </html>
