@@ -1399,7 +1399,7 @@ h3{
 
 /* Sections background: Quote */
 .section-quote {
-  background: url(../img/8077616.png) center no-repeat fixed;
+  background: url(../img/indicado.png) center no-repeat fixed;
   display: flex;
 }
 
@@ -1422,11 +1422,11 @@ h3{
 @media only screen and (max-width: 479px) {
   /* Section: Portfolio */
   .section-me {
-    background: url(../img/celu.jpg) center no-repeat;
+    background: url(../img/nuz.png) center no-repeat;
   }
 
   .section-quote {
-  background: url(../img/8077616.png) center no-repeat;
+  background: url(../img/indicado.png) center no-repeat;
 }
 }
 .section-me h2 {
