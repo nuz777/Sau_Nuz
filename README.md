@@ -130,7 +130,7 @@ SAUNUZ_PROJECT/
 
 ---
 
-## 🎨 Archivos CSS
+##  Archivos CSS
 
 ### **style.css**
 - Estilos principales del sitio
@@ -240,7 +240,7 @@ Contiene funcionalidades clave:
 
 ---
 
-## 🖼️ Carpeta de Imágenes (assets/img/)
+## Carpeta de Imágenes (assets/img/)
 
 **Categorías de Imágenes:**
 
@@ -286,7 +286,7 @@ Contiene funcionalidades clave:
 
 ---
 
-## 🔤 Carpeta de Fuentes (assets/fonts/)
+##  Carpeta de Fuentes (assets/fonts/)
 
 ### Glyphicons
 - `glyphicons-halflings-regular.*` (WOFF2, WOFF, TTF, SVG, EOT)
@@ -315,7 +315,7 @@ Formatos soportados para máxima compatibilidad:
 
 ---
 
-## 🔧 Dependencias Externas
+##  Dependencias Externas
 
 ### CDN Google Fonts
 ```html
@@ -336,7 +336,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-## 📱 Características Responsive
+##  Características Responsive
 
 - **Mobile First:** Diseño adaptable desde dispositivos móviles
 - **Breakpoints principales:**
@@ -352,7 +352,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-## 🎯 Funcionalidades Principales
+##  Funcionalidades Principales
 
 1. ✅ **Búsqueda en tiempo real** - Filtrar contenido
 2. ✅ **Modales informativos** - Pop-ups con detalles
@@ -364,7 +364,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-## 📊 SEO y Meta Tags
+##  SEO y Meta Tags
 
 - Charset UTF-8
 - Viewport configurado para dispositivos móviles
@@ -374,7 +374,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-## 🎨 Paleta de Colores Principal
+##  Paleta de Colores Principal
 
 - **Azul Primario:** #00a2ff
 - **Fondos:** Degradados azules
@@ -383,7 +383,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-## 🚀 Cómo Usar el Proyecto
+##  Cómo Usar el Proyecto
 
 1. **Abrir el sitio:**
    - Abre `index.html` en tu navegador
@@ -403,7 +403,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-## 👥 Créditos
+##  Créditos
 
 **Creadores:** Nuz_v & Thempher09
 
@@ -416,7 +416,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-## 📝 Notas de Desarrollo
+##  Notas de Desarrollo
 
 - El proyecto utiliza HTML5 semántico
 - CSS3 con animaciones modernas
@@ -426,7 +426,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-## 🔐 Seguridad
+## Seguridad
 
 - Sin dependencias inseguras
 - Recursos cargados desde CDNs confiables
