@@ -574,8 +574,6 @@ html, body {
   width: auto;
   height: auto;
   transform: translate(-50%, -50%);
-  will-change: transform;
-  backface-visibility: hidden;
   object-fit: cover;
   z-index: -1;
 }
