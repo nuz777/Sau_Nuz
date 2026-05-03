@@ -565,7 +565,7 @@ html, body {
 
 .hero-video {
   position: absolute;
-  top: 50%;
+  top: 90%;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
@@ -579,7 +579,7 @@ html, body {
 @media only screen and (max-width: 768px) {
   .hero-video {
    left: 20%;
-   transform: translate(-60%, -50%);
+   transform: translate(-40%, -50%);
   }
 }
 
@@ -1108,9 +1108,9 @@ html, body {
 .team-member .team-member-back {
   padding: 0 20px;
   display: table;
-  background: #196fc2;
+  background: #08113a2d;
   text-align: center;
-  color: #ffffff;
+  color: #f5f5f5;
   transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
@@ -1156,32 +1156,45 @@ html, body {
   margin: 0 auto;
 }
 
+
+/* Tablets */
 @media only screen and (max-width: 991px) {
-  /* Section: Team */
   .section-team .col-xs-6:nth-child(n+3) {
     margin-top: 30px;
   }
 }
 
+/* Móvil */
 @media only screen and (max-width: 767px) {
-  /* Section: Team */
   .team {
     margin-top: 30px;
   }
-}
 
-@media only screen and (max-width: 479px) {
   .team .row {
     display: flex;
     flex-wrap: wrap;
   }
 
   .team .row > div {
-    width: 50%;
+    width: 100%; /* 🔥 1 por fila */
+    padding: 10px;
+  }
+
+  .team-member {
+    height: 380px; /* 🔥 ajusta altura */
   }
 }
 
+/* Móviles pequeños */
+@media only screen and (max-width: 479px) {
+  .team .row > div {
+    width: 100%; /* 🔥 sigue en 1 columna */
+  }
 
+  .team-member {
+    height: 360px; /* 🔥 un poco más compacto */
+  }
+}
 /* Section: Portfolio */
 .portfolio {
   margin-top: 50px;
