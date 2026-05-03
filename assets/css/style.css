@@ -1385,10 +1385,14 @@ h3{
   visibility: visible;
 }
 
-.portfolio-item:hover .portfolio-item-thumb .rectangle:hover {
-  background-color: #196fc2;
-  border-color: #196fc2;
+.portfolio-item:hover .portfolio-item-thumb .rectangle, .portfolio-item:hover .portfolio-item-thumb i {
+  background-color: #0084ff;
+  border-color: #f4faff;
   color: #ffffff;
+}
+.portfolio-item-thumb .rectangle:hover {
+  background-color: #00a2ff;
+  transform: scale(1.6);
 }
 
 .portfolio-item:hover .portfolio-info {
