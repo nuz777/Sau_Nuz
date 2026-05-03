@@ -222,7 +222,9 @@ html, body {
   -ms-transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-
+.rectangle i {
+  color: #196fc2;
+}
 
 .big-rectangle {
   position: absolute;
