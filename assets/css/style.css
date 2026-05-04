@@ -1186,44 +1186,8 @@ html, body {
 
 
 /* Tablets */
-@media only screen and (max-width: 991px) {
-  .section-team .col-xs-6:nth-child(n+3) {
-    margin-top: 30px;
-  }
-}
 
-/* Móvil */
-@media only screen and (max-width: 767px) {
-  .team {
-    margin-top: 30px;
-  }
 
-  .team .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .team .row > div {
-    width: 100%; /* 🔥 1 por fila */
-    padding: 10px;
-  }
-
-  .team-member {
-    height: 380px; /* 🔥 ajusta altura */
-  }
-}
-
-/* Móviles pequeños */
-@media only screen and (max-width: 479px) {
-  .team .row > div {
-    width: 100%; /* 🔥 sigue en 1 columna */
-  }
-
-  .team-member {
-    height: 360px; /* 🔥 un poco más compacto */
-  }
-}
-/* Section: Portfolio */
 .portfolio {
   margin-top: 50px;
 }
