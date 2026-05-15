@@ -8,26 +8,41 @@
     <link rel="stylesheet" href="../css/styleforfiles.css" />
   </head>
 
-  <body>
-    <header>
-      <h1>Archivos - Tools</h1>
-      <div style="text-align: right; margin: 1px">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Buscar herramientas..."
-          style="
-            padding: 10px;
-            width: 250px;
-            border-radius: 10px;
-            border: none;
-            outline: none;
-            background: #111;
-            color: white;
-          "
-        />
-      </div>
-    </header>
+   <header>
+  <h1>Tools <span>SauNuz</span></h1>
+
+  <div class="header-right">
+    <nav>
+      <ul>
+        <li><a href="../../assets/pages/prueba.html">Inicio</a></li>
+        <li><a href="./herramientas.html">Herramientas</a></li>
+      <a href="../docs/Manual_SauNuz.pdf" download="Manual_SauNuz.pdf" target="_blank" >Manual</a></li>
+      </ul>
+    </nav>
+    <input
+      type="text"
+      id="searchInput"
+      class="header-search"
+      placeholder="Buscar juego..."
+    />
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../../assets/pages/prueba.html">Inicio</a>
+  <input
+    type="text"
+    id="searchInputMobile"
+    class="mobile-search"
+    placeholder="Buscar juego..."
+  />
+</div>
 
     <main>
       <section class="mascotas-grid">
@@ -224,7 +239,7 @@
     </footer>
 
     <script>
-      const elementos = document.querySelectorAll(".fade-in");
+     const elementos = document.querySelectorAll(".fade-in");
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -268,6 +283,39 @@
           }
         });
       });
+
+      // Hamburguesa
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+});
+
+// Cerrar menu al hacer click en un link
+mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+    });
+});
+
+// Search mobile sincronizado con el principal
+const searchInputMobile = document.getElementById('searchInputMobile');
+searchInputMobile.addEventListener('keyup', function () {
+    const value = this.value.toLowerCase();
+    cards.forEach((card) => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = title.includes(value) ? 'block' : 'none';
+    });
+});
+
+// Header scrolled
+window.addEventListener('scroll', () => {
+    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 10);
+});
+      
     </script>
   </body>
 </html>

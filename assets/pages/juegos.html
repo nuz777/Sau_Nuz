@@ -9,31 +9,50 @@
   </head>
 
   <body>
-    <header>
-      <h1>Games SauNuz</h1>
-      <div style="text-align: right; margin: 1px">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Buscar juego..."
-          style="
-            padding: 10px;
-            width: 250px;
-            border-radius: 10px;
-            border: none;
-            outline: none;
-            background: #111;
-            color: white;
-          "
-        />
-      </div>
-    </header>
+   <header>
+  <h1>Games <span>SauNuz</span></h1>
+
+  <div class="header-right">
+    <nav>
+      <ul>
+        <li><a href="../../assets/pages/prueba.html">Inicio</a></li>
+        <li><a href="./herramientas.html">Herramientas</a></li>
+        <li><a href="../../assets/docs/Manual_SauNuz.pdf" download="Manual_SauNuz.pdf">Manual</a></li>
+      </ul>
+    </nav>
+    <input
+      type="text"
+      id="searchInput"
+      class="header-search"
+      placeholder="Buscar juego..."
+    />
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<!-- MENÚ MOBILE -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../../assets/pages/prueba.html">Inicio</a>
+  <a href="./herramientas.html">Herramientas</a>
+  <a href="../../public/docs/Manual_SauNuz.pdf" download>Manual</a>
+  <input
+    type="text"
+    id="searchInputMobile"
+    class="mobile-search"
+    placeholder="Buscar juego..."
+  />
+</div>
 
     <main>
       <section class="mascotas-grid">
         <div class="card fade-in" onclick="openModal('m1')">
           <img src="../img/dirt4.jpg" loading="lazy" />
-          <h3>Dirt Rally 2.0</h3>
+          <h3>Dirt Rally 4 </h3>
           <p>35 GB</p>
         </div>
 
@@ -69,7 +88,7 @@
         </div>
 
         <div class="card fade-in" onclick="openModal('m7')">
-          <img src="../img/f1.jpg"loading="lazy" />
+          <img src="../img/f1.jpg" loading="lazy" />
           <h3>F1 2014</h3>
           <p>10 GB</p>
         </div>
@@ -97,193 +116,289 @@
           <h3>gta 4</h3>
           <p>16GB</p>
         </div>
-      </section>
 
-      <div>
-        <a href="../../index.html" class="btn-volver">Volver</a>
-
-        <a href="./herramientas.html" class="btn-volver">siguente </a>
-      </div>
-    </main>
+        <div>
+      
+    </div>
 
     
 
+      <div>
+        <a href="../../assets/pages/prueba.html" class="btn-volver">Volver</a>
+      </div>
+    </main>
     <!-- MODALES -->
 
-    <div class="modal" id="m1">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('m1')">&times;</span>
-        <img src="../img/dirt4.jpg" class="modal-img" loading="lazy" />
-        <h2>Dirt 4</h2>
-        <p>
-          Simulador de carreras realista con rutas de rally, física avanzada y
-          múltiples modos de juego.
-        </p>
-        <p><strong>Peso:</strong> 35 GB</p>
-        <a href="https://blizzpaste.com/Games/D1RT41.txt" class="download-btn"
-          >Descargar</a
-        >
-      </div>
-    </div>
-
-    <div class="modal" id="m2">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('m2')">&times;</span>
-        <img src="../img/dfn.jpg" class="modal-img" />
-        <h2>DNF Duel</h2>
-        <p>Juego de lucha 2D con estilo anime y combates dinámicos.</p>
-        <p><strong>Peso:</strong> 12 GB</p>
-        <a href="https://blizzpaste.com/Games_2/DFNDUELNE1.txt" target="_blank" class="download-btn">Descargar</a>
-      </div>
-    </div>
-
-    <div class="modal" id="m3">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('m3')">&times;</span>
-        <img src="../img/GOTATWAR.jpg" class="modal-img" />
-        <h2>God of War Ragnarok</h2>
-        <p>
-          Aventura épica basada en la mitología nórdica con Kratos y Atreus.
-        </p>
-        <p><strong>Peso:</strong> 114 GB</p>
-        <a
-          href="https://filekeeper.net/download"
-          target="_blank"
-          class="download-btn"
-          >Descargar</a
-        >
-      </div>
-    </div>
-
-    <div class="modal" id="m4">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('m4')">&times;</span>
-        <img src="../img/Dragon_Ball_FighterZ_portada.jpg" class="modal-img" />
-        <h2>Dragon Ball FighterZ</h2>
-        <p>Juego de lucha 3v3 con gráficos estilo anime espectaculares.</p>
-        <p><strong>Peso:</strong> 9 GB</p>
-        <a href="#" class="download-btn">Descargar</a>
-      </div>
-    </div>
-
-    <div class="modal" id="m5">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('m5')">&times;</span>
-        <img src="../img/COD.jpg" class="modal-img" />
-        <h2>Call of Duty MW3</h2>
-        <p>Shooter intenso con campaña, multijugador y acción rápida.</p>
-        <p><strong>Peso:</strong> 14 GB</p>
-        <a
-          href="https://blizzpaste.com/Games_3/CLLOFDMW3.txt"
-          target="_blank"
-          class="download-btn"
-          >Descargar</a
-        >
-      </div>
-    </div>
-
-    <div class="modal" id="m6">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('m6')">&times;</span>
-        <img src="../img/ets2.jpg" class="modal-img" />
-        <h2>Euro Truck Simulator 2</h2>
-        <p>Simulador de camiones por toda Europa con gestión de empresa.</p>
-        <p><strong>Peso:</strong> 15 GB</p>
-        <a
-          href="https://blizzpaste.com/Games/EUROTRS1.txt"
-          target="_blank"
-          class="download-btn"
-          >Descargar</a
-        >
-      </div>
-    </div>
-
-    <div class="modal" id="m7">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('m7')">&times;</span>
-        <img src="../img/f1.jpg" class="modal-img" />
-        <h2>F1 2014</h2>
-        <p>
-          Simulación oficial de Fórmula 1 con todos los equipos y circuitos.
-        </p>
-        <p><strong>Peso:</strong> 10 GB</p>
-        <a
-          href="https://www.reddit.com/r/abandonware/comments/1962vy4/f1_2013_to_f1_2020_download_links/?tl=es-419"
-          target="_blank"
-          class="download-btn"
-          >Descargar</a
-        >
-      </div>
-    </div>
-
-    <div class="modal" id="m8">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('m8')">&times;</span>
-        <img src="../img/Metro.jpg" class="modal-img" />
-        <h2>Metro Redux</h2>
-        <p>Shooter postapocalíptico con historia profunda y supervivencia.</p>
-        <p><strong>Peso:</strong> 20 GB</p>
-        <a
-          href="https://www.mediafire.com/file/eiupwbgb8gdvag1"
-          target="_blank"
-          class="download-btn"
-          >Descargar</a
-        >
-      </div>
-    </div>
-
-    <div class="modal" id="m9">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('m9')">&times;</span>
-        <img src="../img/blaz.jpg" class="modal-img" />
-        <h2>BlazBlue Cross Tag Battle Deluxe Edition</h2>
-        <p>Juego de lucha crossover con personajes anime y combates rápidos.</p>
-        <p><strong>Peso:</strong> 24 GB</p>
-        <a
-          href="https://blizzpaste.com/Games/BLZBLUTB.txt"
-          target="_blank"
-          class="download-btn"
-          >Descargar</a
-        >
-      </div>
-    </div>
-
-    <div class="modal" id="m10">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('m10')">&times;</span>
-        <img src="../img/mushe.png" class="modal-img" />
-        <h2>Muse Dash</h2>
-        <p>Juego rítmico divertido con estilo anime y música dinámica.</p>
-        <p><strong>Peso:</strong> 2 GB</p>
-        <a
-          href="https://datavaults.co/39okjrycdrpv/Muse_Dash_v6.0.1_ElEnemigos.rar"
-          target="_blank"
-          class="download-btn"
-          >Descargar</a
-        >
-      </div>
-    </div>
-
-      <div class="modal" id="m11">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('m11')">&times;</span>
-          <img src="../img/gta4.jpg" class="modal-img" />
-          <h2>GTA 4</h2>
-          <p>es gta 5 pero con fisicas xd </p>
-          <p><strong>Peso:</strong> 15 GB</p>
-          <a
-            href="https://blizzpaste.com/Games/GT4ACE1.txt"
-            target="_blank"
-            class="download-btn"
-            >Descargar</a
-          >
+<div class="modal" id="m1">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m1')">&times;</span>
+    <img src="../img/dirt4.jpg" class="modal-img" loading="lazy" />
+    <h2>Dirt Rally 4 </h2>
+    <p>Simulador de carreras realista con rutas de rally, física avanzada y múltiples modos de juego.</p>
+    <p><strong>Peso:</strong> 35 GB</p>
+    <div class="requisitos">
+      <p class="requisitos-titulo">⚙ Requisitos del sistema</p>
+      <div class="requisitos-grid">
+        <div class="req-box">
+          <p class="req-box-titulo">Mínimos</p>
+          <p><b>OS:</b> Win 10<br><b>CPU:</b> i5-4590<br><b>RAM:</b> 8 GB<br><b>GPU:</b> GTX 970<br><b>DirectX:</b> v11</p>
+        </div>
+        <div class="req-box">
+          <p class="req-box-titulo rec">Recomendados</p>
+          <p><b>OS:</b> Win 10/11<br><b>CPU:</b> i7-6700K<br><b>RAM:</b> 16 GB<br><b>GPU:</b> RTX 2060<br><b>DirectX:</b> v11</p>
         </div>
       </div>
     </div>
+    <a href="https://blizzpaste.com/Games/D1RT41.txt" class="download-btn">Descargar</a>
+  </div>
+</div>
 
+<div class="modal" id="m2">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m2')">&times;</span>
+    <img src="../img/dfn.jpg" class="modal-img" />
+    <h2>DNF Duel</h2>
+    <p>Juego de lucha 2D con estilo anime y combates dinámicos.</p>
+    <p><strong>Peso:</strong> 12 GB</p>
+    <div class="requisitos">
+      <p class="requisitos-titulo">⚙ Requisitos del sistema</p>
+      <div class="requisitos-grid">
+        <div class="req-box">
+          <p class="req-box-titulo">Mínimos</p>
+          <p><b>OS:</b> Win 10<br><b>CPU:</b> i5-8600<br><b>RAM:</b> 8 GB<br><b>GPU:</b> GTX 1060<br><b>DirectX:</b> v11</p>
+        </div>
+        <div class="req-box">
+          <p class="req-box-titulo rec">Recomendados</p>
+          <p><b>OS:</b> Win 10/11<br><b>CPU:</b> i7-9700K<br><b>RAM:</b> 16 GB<br><b>GPU:</b> RTX 2070<br><b>DirectX:</b> v12</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://blizzpaste.com/Games_2/DFNDUELNE1.txt" target="_blank" class="download-btn">Descargar</a>
+  </div>
+</div>
+
+<div class="modal" id="m3">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m3')">&times;</span>
+    <img src="../img/GOTATWAR.jpg" class="modal-img" />
+    <h2>God of War Ragnarok</h2>
+    <p>Aventura épica basada en la mitología nórdica con Kratos y Atreus.</p>
+    <p><strong>Peso:</strong> 114 GB</p>
+    <div class="requisitos">
+      <p class="requisitos-titulo">⚙ Requisitos del sistema</p>
+      <div class="requisitos-grid">
+        <div class="req-box">
+          <p class="req-box-titulo">Mínimos</p>
+          <p><b>OS:</b> Win 10 64-bit<br><b>CPU:</b> i5-6600K<br><b>RAM:</b> 8 GB<br><b>GPU:</b> GTX 1060<br><b>DirectX:</b> v11</p>
+        </div>
+        <div class="req-box">
+          <p class="req-box-titulo rec">Recomendados</p>
+          <p><b>OS:</b> Win 11 64-bit<br><b>CPU:</b> Ryzen 7 3700X<br><b>RAM:</b> 16 GB<br><b>GPU:</b> RTX 3080<br><b>DirectX:</b> v12</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://filekeeper.net/download" target="_blank" class="download-btn">Descargar</a>
+  </div>
+</div>
+
+<div class="modal" id="m4">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m4')">&times;</span>
+    <img src="../img/Dragon_Ball_FighterZ_portada.jpg" class="modal-img" />
+    <h2>Dragon Ball FighterZ</h2>
+    <p>Juego de lucha 3v3 con gráficos estilo anime espectaculares.</p>
+    <p><strong>Peso:</strong> 9 GB</p>
+    <div class="requisitos">
+      <p class="requisitos-titulo">⚙ Requisitos del sistema</p>
+      <div class="requisitos-grid">
+        <div class="req-box">
+          <p class="req-box-titulo">Mínimos</p>
+          <p><b>OS:</b> Win 7/8/10<br><b>CPU:</b> i5-4460<br><b>RAM:</b> 4 GB<br><b>GPU:</b> GTX 660<br><b>DirectX:</b> v11</p>
+        </div>
+        <div class="req-box">
+          <p class="req-box-titulo rec">Recomendados</p>
+          <p><b>OS:</b> Win 10<br><b>CPU:</b> i7-3770<br><b>RAM:</b> 8 GB<br><b>GPU:</b> GTX 1060<br><b>DirectX:</b> v11</p>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="download-btn">Descargar</a>
+  </div>
+</div>
+
+<div class="modal" id="m5">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m5')">&times;</span>
+    <img src="../img/COD.jpg" class="modal-img" />
+    <h2>Call of Duty MW3</h2>
+    <p>Shooter intenso con campaña, multijugador y acción rápida.</p>
+    <p><strong>Peso:</strong> 14 GB</p>
+    <div class="requisitos">
+      <p class="requisitos-titulo">⚙ Requisitos del sistema</p>
+      <div class="requisitos-grid">
+        <div class="req-box">
+          <p class="req-box-titulo">Mínimos</p>
+          <p><b>OS:</b> Win 7 64-bit<br><b>CPU:</b> i5-2500K<br><b>RAM:</b> 6 GB<br><b>GPU:</b> GTX 560<br><b>DirectX:</b> v11</p>
+        </div>
+        <div class="req-box">
+          <p class="req-box-titulo rec">Recomendados</p>
+          <p><b>OS:</b> Win 10 64-bit<br><b>CPU:</b> i7-3770<br><b>RAM:</b> 8 GB<br><b>GPU:</b> GTX 970<br><b>DirectX:</b> v11</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://blizzpaste.com/Games_3/CLLOFDMW3.txt" target="_blank" class="download-btn">Descargar</a>
+  </div>
+</div>
+
+<div class="modal" id="m6">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m6')">&times;</span>
+    <img src="../img/ets2.jpg" class="modal-img" />
+    <h2>Euro Truck Simulator 2</h2>
+    <p>Simulador de camiones por toda Europa con gestión de empresa.</p>
+    <p><strong>Peso:</strong> 15 GB</p>
+    <div class="requisitos">
+      <p class="requisitos-titulo">⚙ Requisitos del sistema</p>
+      <div class="requisitos-grid">
+        <div class="req-box">
+          <p class="req-box-titulo">Mínimos</p>
+          <p><b>OS:</b> Win 7/8/10<br><b>CPU:</b> Dual Core 2.4 GHz<br><b>RAM:</b> 4 GB<br><b>GPU:</b> GeForce GTS 450<br><b>DirectX:</b> v9</p>
+        </div>
+        <div class="req-box">
+          <p class="req-box-titulo rec">Recomendados</p>
+          <p><b>OS:</b> Win 10/11<br><b>CPU:</b> i7-4770<br><b>RAM:</b> 8 GB<br><b>GPU:</b> GTX 1060<br><b>DirectX:</b> v11</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://blizzpaste.com/Games/EUROTRS1.txt" target="_blank" class="download-btn">Descargar</a>
+  </div>
+</div>
+
+<div class="modal" id="m7">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m7')">&times;</span>
+    <img src="../img/f1.jpg" class="modal-img" />
+    <h2>F1 2014</h2>
+    <p>Simulación oficial de Fórmula 1 con todos los equipos y circuitos.</p>
+    <p><strong>Peso:</strong> 10 GB</p>
+    <div class="requisitos">
+      <p class="requisitos-titulo">⚙ Requisitos del sistema</p>
+      <div class="requisitos-grid">
+        <div class="req-box">
+          <p class="req-box-titulo">Mínimos</p>
+          <p><b>OS:</b> Win 7/8<br><b>CPU:</b> Core 2 Quad Q8400<br><b>RAM:</b> 4 GB<br><b>GPU:</b> GTX 460<br><b>DirectX:</b> v11</p>
+        </div>
+        <div class="req-box">
+          <p class="req-box-titulo rec">Recomendados</p>
+          <p><b>OS:</b> Win 7/8/10<br><b>CPU:</b> i5-4670<br><b>RAM:</b> 8 GB<br><b>GPU:</b> GTX 760<br><b>DirectX:</b> v11</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://www.reddit.com/r/abandonware/comments/1962vy4/f1_2013_to_f1_2020_download_links/?tl=es-419" target="_blank" class="download-btn">Descargar</a>
+  </div>
+</div>
+
+<div class="modal" id="m8">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m8')">&times;</span>
+    <img src="../img/Metro.jpg" class="modal-img" />
+    <h2>Metro Redux</h2>
+    <p>Shooter postapocalíptico con historia profunda y supervivencia.</p>
+    <p><strong>Peso:</strong> 20 GB</p>
+    <div class="requisitos">
+      <p class="requisitos-titulo">⚙ Requisitos del sistema</p>
+      <div class="requisitos-grid">
+        <div class="req-box">
+          <p class="req-box-titulo">Mínimos</p>
+          <p><b>OS:</b> Win 7 64-bit<br><b>CPU:</b> Dual Core 2.2 GHz<br><b>RAM:</b> 2 GB<br><b>GPU:</b> GTX 480<br><b>DirectX:</b> v11</p>
+        </div>
+        <div class="req-box">
+          <p class="req-box-titulo rec">Recomendados</p>
+          <p><b>OS:</b> Win 10 64-bit<br><b>CPU:</b> Quad Core 2.6 GHz<br><b>RAM:</b> 8 GB<br><b>GPU:</b> GTX 970<br><b>DirectX:</b> v11</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://www.mediafire.com/file/eiupwbgb8gdvag1" target="_blank" class="download-btn">Descargar</a>
+  </div>
+</div>
+
+<div class="modal" id="m9">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m9')">&times;</span>
+    <img src="../img/blaz.jpg" class="modal-img" />
+    <h2>BlazBlue Cross Tag Battle Deluxe Edition</h2>
+    <p>Juego de lucha crossover con personajes anime y combates rápidos.</p>
+    <p><strong>Peso:</strong> 24 GB</p>
+    <div class="requisitos">
+      <p class="requisitos-titulo">⚙ Requisitos del sistema</p>
+      <div class="requisitos-grid">
+        <div class="req-box">
+          <p class="req-box-titulo">Mínimos</p>
+          <p><b>OS:</b> Win 7/8/10<br><b>CPU:</b> i5-4460<br><b>RAM:</b> 4 GB<br><b>GPU:</b> GTX 660<br><b>DirectX:</b> v11</p>
+        </div>
+        <div class="req-box">
+          <p class="req-box-titulo rec">Recomendados</p>
+          <p><b>OS:</b> Win 10<br><b>CPU:</b> i7-6700<br><b>RAM:</b> 8 GB<br><b>GPU:</b> GTX 1060<br><b>DirectX:</b> v11</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://blizzpaste.com/Games/BLZBLUTB.txt" target="_blank" class="download-btn">Descargar</a>
+  </div>
+</div>
+
+<div class="modal" id="m10">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m10')">&times;</span>
+    <img src="../img/mushe.png" class="modal-img" />
+    <h2>Muse Dash</h2>
+    <p>Juego rítmico divertido con estilo anime y música dinámica.</p>
+    <p><strong>Peso:</strong> 2 GB</p>
+    <div class="requisitos">
+      <p class="requisitos-titulo">⚙ Requisitos del sistema</p>
+      <div class="requisitos-grid">
+        <div class="req-box">
+          <p class="req-box-titulo">Mínimos</p>
+          <p><b>OS:</b> Win 7/10<br><b>CPU:</b> Core 2 Duo<br><b>RAM:</b> 2 GB<br><b>GPU:</b> Intel HD 4000<br><b>DirectX:</b> v9</p>
+        </div>
+        <div class="req-box">
+          <p class="req-box-titulo rec">Recomendados</p>
+          <p><b>OS:</b> Win 10<br><b>CPU:</b> i5-3570<br><b>RAM:</b> 4 GB<br><b>GPU:</b> GTX 750 Ti<br><b>DirectX:</b> v11</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://datavaults.co/39okjrycdrpv/Muse_Dash_v6.0.1_ElEnemigos.rar" target="_blank" class="download-btn">Descargar</a>
+  </div>
+</div>
+
+<div class="modal" id="m11">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m11')">&times;</span>
+    <img src="../img/gta4.jpg" class="modal-img" />
+    <h2>GTA 4</h2>
+    <p>Es GTA 5 pero con físicas xd</p>
+    <p><strong>Peso:</strong> 16 GB</p>
+    <div class="requisitos">
+      <p class="requisitos-titulo">⚙ Requisitos del sistema</p>
+      <div class="requisitos-grid">
+        <div class="req-box">
+          <p class="req-box-titulo">Mínimos</p>
+          <p><b>OS:</b> Win Vista/7<br><b>CPU:</b> Intel Core 2 Duo 1.8 GHz<br><b>RAM:</b> 1.5 GB<br><b>GPU:</b> 256 MB VRAM<br><b>DirectX:</b> v9</p>
+        </div>
+        <div class="req-box">
+          <p class="req-box-titulo rec">Recomendados</p>
+          <p><b>OS:</b> Win 10<br><b>CPU:</b> i5-2500K<br><b>RAM:</b> 4 GB<br><b>GPU:</b> GTX 760<br><b>DirectX:</b> v10</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://blizzpaste.com/Games/GT4ACE1.txt" target="_blank" class="download-btn">Descargar</a>
+  </div>
+</div>
+  
+
+
+</div>
     <footer>
       <p>SauNuz ©</p>
-     <a href="../docs/Manual_SauNuz.pdf" download="Manual_SauNuz.pdf" class="btn-volver">Manual</a>
+     <a href="../../public/docs/Manual_SauNuz.pdf" download="Manual_SauNuz.pdf" class="btn-volver">Manual</a>
 
     </footer>
 
@@ -332,6 +447,38 @@
           }
         });
       });
+
+      // Hamburguesa
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+});
+
+// Cerrar menu al hacer click en un link
+mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+    });
+});
+
+// Search mobile sincronizado con el principal
+const searchInputMobile = document.getElementById('searchInputMobile');
+searchInputMobile.addEventListener('keyup', function () {
+    const value = this.value.toLowerCase();
+    cards.forEach((card) => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = title.includes(value) ? 'block' : 'none';
+    });
+});
+
+// Header scrolled
+window.addEventListener('scroll', () => {
+    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 10);
+});
     </script>
   </body>
 </html>
