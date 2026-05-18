@@ -41,7 +41,7 @@ export default function Programming() {
               <img
                 src={l.img}
                 alt={l.title}
-                className="w-full h-[250px] object-cover rounded-lg mb-2"
+                className="w-full h-62.5 object-contain rounded-lg mb-2"
                 loading="lazy"
               />
               <h3 className="text-white font-semibold text-sm">{l.title}</h3>
