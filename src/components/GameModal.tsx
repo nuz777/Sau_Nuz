@@ -11,11 +11,11 @@ export default function GameModal({ game, onClose }: GameModalProps) {
 
   return (
     <Modal isOpen={!!game} onClose={onClose}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="pt-5 flex flex-col sm:flex-row gap-8">
         <img
           src={game.img}
           alt={game.title}
-          className="w-full h-auto max-h-[50vh] object-cover rounded-xl md:row-span-full"
+          className=" h-auto max-h-[50vh] object-contain rounded-xl md:row-span-full"
         />
 
         <div className="md:col-start-2">
