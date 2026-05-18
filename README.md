@@ -1,11 +1,8 @@
-
 [![Ver sitio](https://img.shields.io/badge/Visitar-Sitio-blue?style=for-the-badge)](https://nuz777.github.io/Sau_Nuz/)
-
-
 
 # Documentación Completa del Proyecto SauNuz
 
-##  Descripción General
+## Descripción General
 
 **SauNuz Tools** es un sitio web moderno e interactivo creado por **Nuz_v** y **Thempher09**. Este proyecto sirve como portal centralizado para acceder a recursos de programación, juegos y herramientas de software. Ofrece una experiencia visual atractiva con navegación fluida y componentes interactivos.
 
@@ -58,6 +55,7 @@ SAUNUZ_PROJECT/
 ## 📄 Descripción de Archivos Principales
 
 ### **index.html**
+
 **Archivo Principal - Página de Inicio**
 
 - **Propósito:** Página de inicio del sitio con presentación principal
@@ -80,6 +78,7 @@ SAUNUZ_PROJECT/
 ---
 
 ### 📄 **assets/pages/programacion.html**
+
 **Lenguajes de Programación**
 
 - **Propósito:** Catálogo interactivo de lenguajes de programación
@@ -99,6 +98,7 @@ SAUNUZ_PROJECT/
 ---
 
 ### 📄 **assets/pages/juegos.html**
+
 **Catálogo de Juegos**
 
 - **Propósito:** Showcase de juegos disponibles
@@ -118,6 +118,7 @@ SAUNUZ_PROJECT/
 ---
 
 ### 📄 **assets/pages/herramientas.html**
+
 **Archivos y Herramientas de Software**
 
 - **Propósito:** Catálogo de herramientas de sistema y software
@@ -135,9 +136,10 @@ SAUNUZ_PROJECT/
 
 ---
 
-##  Archivos CSS
+## Archivos CSS
 
 ### **style.css**
+
 - Estilos principales del sitio
 - Animaciones CSS personalizadas:
   - `typing`: Efecto de escritura para el h1
@@ -148,21 +150,25 @@ SAUNUZ_PROJECT/
 - Media queries para diseño responsive
 
 ### **modal-intro.css**
+
 - Estilos específicos para modales de introducción
 - Animaciones de apertura/cierre
 
 ### **styleforfiles.css**
+
 - Estilos reutilizables para páginas de contenido
 - Diseño de grid (mascotas-grid)
 - Estilos de tarjetas (.card)
 - Animaciones de fade-in
 
 ### **bootstrap.min.css**
+
 - Framework CSS de Bootstrap (minificado)
 - Sistema de grid responsive
 - Componentes pre-diseñados
 
 ### **font-awesome.min.css**
+
 - Librería de iconos Font Awesome
 - Utilizada para íconos de navegación y elementos visuales
 
@@ -171,6 +177,7 @@ SAUNUZ_PROJECT/
 ## ⚙️ Archivos JavaScript
 
 ### **script.js** (Principal)
+
 Contiene funcionalidades clave:
 
 1. **Navegación Affix**
@@ -209,37 +216,45 @@ Contiene funcionalidades clave:
 ---
 
 ### **jquery.min.js**
+
 - jQuery v3.x minificado
 - Requisito fundamental para el funcionamiento
 - Manipulación del DOM y eventos
 
 ### **bootstrap.min.js**
+
 - Componentes interactivos de Bootstrap
 - Modales, dropdowns, tooltips
 - Validación de formularios
 
 ### **slick.min.js**
+
 - Plugin de carrusel profesional
 - Navegación responsive
 - Múltiples ítems por diapositiva
 
 ### **jquery.shuffle.min.js**
+
 - Filtrado y reorganización de elementos
 - Animaciones suaves
 
 ### **jquery.easing.min.js**
+
 - Funciones de easing personalizadas
 - Animaciones más naturales
 
 ### **jquery.countTo.min.js**
+
 - Contador animado
 - Efecto de incremento numérico
 
 ### **bootstrap-progressbar.min.js**
+
 - Barras de progreso animadas
 - Visualización de porcentajes
 
 ### **touchswipe.min.js**
+
 - Detección de gestos táctiles
 - Soporte para swipe izquierda/derecha
 
@@ -250,11 +265,13 @@ Contiene funcionalidades clave:
 **Categorías de Imágenes:**
 
 ### Branding
+
 - `saunuz_500 (1).png` - Logo del proyecto
 - `SN-tools.jpg` - Banner de herramientas
 - `favicon1.jpg` - Icono del sitio
 
 ### Lenguajes de Programación
+
 - `js.png` - JavaScript
 - `python.png` - Python
 - `html.png` - HTML
@@ -262,6 +279,7 @@ Contiene funcionalidades clave:
 - `Java.jpg` - Java
 
 ### Juegos
+
 - `dirt4.jpg` - Dirt Rally 4
 - `dirt2.0.jpg` - Dirt 2.0
 - `GOTATWAR.jpg` - God of War
@@ -271,6 +289,7 @@ Contiene funcionalidades clave:
 - `juegoslivianosmodal.jpg` - Juegos Livianos
 
 ### Sistemas Operativos
+
 - `windows11.jpg` - Windows 11
 - `win10.jpg` - Windows 10
 - `Wi11litepng` - Windows 11 Lite
@@ -279,10 +298,12 @@ Contiene funcionalidades clave:
 - `android.png` - Android v2
 
 ### Fondos
+
 - `abstract-luxury-gradient-blue-background-smooth.jpg` - Degradado azul
 - `abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner (1) (1).jpg` - Degradado oscuro
 
 ### Otros
+
 - `browserconfig.xml` - Configuración del navegador
 - `manifest.json` - Manifiesto PWA
 - `67856-ezgif.com-video-to-gif-converter.gif` - Animación GIF
@@ -291,17 +312,20 @@ Contiene funcionalidades clave:
 
 ---
 
-##  Carpeta de Fuentes (assets/fonts/)
+## Carpeta de Fuentes (assets/fonts/)
 
 ### Glyphicons
+
 - `glyphicons-halflings-regular.*` (WOFF2, WOFF, TTF, SVG, EOT)
 - Iconos de Bootstrap
 
 ### Font Awesome
+
 - `fontawesome-webfont.*` (WOFF2, TTF, WOFF, SVG, EOT)
 - `FontAwesome.otf` - Formato OpenType
 
 Formatos soportados para máxima compatibilidad:
+
 - WOFF2: Formato moderno comprimido
 - WOFF: Web Open Font Format
 - TTF: TrueType Font
@@ -313,6 +337,7 @@ Formatos soportados para máxima compatibilidad:
 ## 📖 Documentación Adicional
 
 ### **Manual_SauNuz.pdf** (assets/docs/)
+
 - Manual de usuario del proyecto
 - Guía de uso de herramientas
 - Instrucciones de instalación
@@ -320,15 +345,17 @@ Formatos soportados para máxima compatibilidad:
 
 ---
 
-##  Dependencias Externas
+## Dependencias Externas
 
 ### CDN Google Fonts
+
 ```html
 https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Varela
 https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 ```
 
 ### Librerías JavaScript Incluidas
+
 - Bootstrap 4.x
 - jQuery 3.x
 - Font Awesome 4.x
@@ -341,7 +368,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-##  Características Responsive
+## Características Responsive
 
 - **Mobile First:** Diseño adaptable desde dispositivos móviles
 - **Breakpoints principales:**
@@ -357,7 +384,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-##  Funcionalidades Principales
+## Funcionalidades Principales
 
 1. ✅ **Búsqueda en tiempo real** - Filtrar contenido
 2. ✅ **Modales informativos** - Pop-ups con detalles
@@ -369,7 +396,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-##  SEO y Meta Tags
+## SEO y Meta Tags
 
 - Charset UTF-8
 - Viewport configurado para dispositivos móviles
@@ -379,7 +406,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-##  Paleta de Colores Principal
+## Paleta de Colores Principal
 
 - **Azul Primario:** #00a2ff
 - **Fondos:** Degradados azules
@@ -388,7 +415,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-##  Cómo Usar el Proyecto
+## Cómo Usar el Proyecto
 
 1. **Abrir el sitio:**
    - Abre `index.html` en tu navegador
@@ -408,11 +435,12 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-##  Créditos
+## Créditos
 
 **Creadores:** Nuz_v & Thempher09
 
 **Librerías utilizadas:**
+
 - Bootstrap (Twitter)
 - jQuery (jQuery Foundation)
 - Slick Carousel (Ken Wheeler)
@@ -421,7 +449,7 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 ---
 
-##  Notas de Desarrollo
+## Notas de Desarrollo
 
 - El proyecto utiliza HTML5 semántico
 - CSS3 con animaciones modernas

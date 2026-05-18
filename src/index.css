@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@theme {
+  --font-share: "Share Tech Mono", monospace;
+  --font-varela: "Varela", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-syne: "Syne", sans-serif;
+  --font-space: "Space Mono", monospace;
+  --font-ibm: "IBM Plex Mono", monospace;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 19ch;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: rgba(0, 162, 255, 1);
+  }
+  50% {
+    border-color: rgba(0, 162, 255, 0);
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes homeArrowDown {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  10% {
+    transform: translate3d(0, 5px, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 30px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInLink {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.typing-animate {
+  width: 0;
+  animation:
+    typing 2.8s steps(30, end) forwards,
+    blink 0.7s step-end infinite;
+}
+
+.hero-arrow-bounce {
+  animation: homeArrowDown 2s infinite;
+}
+
+.hero-arrow-bounce:hover {
+  animation-play-state: paused;
+}
+
+.fade-in-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.card-stagger:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.card-stagger:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.card-stagger:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.card-stagger:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.card-stagger:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.card-stagger:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.card-stagger:nth-child(7) {
+  animation-delay: 0.35s;
+}
+.card-stagger:nth-child(8) {
+  animation-delay: 0.4s;
+}
+.card-stagger:nth-child(9) {
+  animation-delay: 0.45s;
+}
+.card-stagger:nth-child(10) {
+  animation-delay: 0.5s;
+}
+.card-stagger:nth-child(11) {
+  animation-delay: 0.55s;
+}
+
+.tool-card-anim {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.tool-card-anim:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.tool-card-anim:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.tool-card-anim:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.tool-card-anim:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+body {
+  font-family: "Share Tech Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
