@@ -36,7 +36,7 @@ export default function Home() {
               </span>
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 items-start mt-[70px]">
+            <div className="grid grid-cols-1 md:grid-cols-3 items-start mt-17.5">
               <div className="space-y-8">
                 <div className="text-right relative pr-24">
                   <div className="absolute right-[5px] top-1/2 -translate-y-1/2 size-12 border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center">

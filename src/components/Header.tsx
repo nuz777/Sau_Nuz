@@ -29,15 +29,19 @@ export default function Header() {
     };
   }, [sidebarOpen]);
 
-  const handleNavClick = (href: string) => {
-    setSidebarOpen(false);
-    if (href.startsWith("/#")) {
-      const id = href.slice(2);
-      setTimeout(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    }
-  };
+    const handleNavClick = (href: string) => {
+      setSidebarOpen(false);
+      if (href.startsWith("/#")) {
+        const id = href.slice(2);
+        setTimeout(() => {
+          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      } else {
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 100);
+      }
+};
 
   return (
     <>
