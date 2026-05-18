@@ -66,7 +66,7 @@ export default function Home() {
               <div className="flex justify-center items-center py-8">
                 <div className="relative size-[230px] rotate-45 shadow-[10px_10px_0_0_transparent]">
                   <img
-                    src="/img/code.png"
+                    src="/img/code.webp"
                     alt="Code"
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 w-48 md:w-56"
                   />
@@ -99,7 +99,7 @@ export default function Home() {
         </section>
 
         {/* Quote section */}
-        <section className="py-36 bg-[url('/img/indicado.png')] sm:bg-fixed bg-cover bg-center text-center relative">
+        <section className="py-36 bg-[url('/img/indicado.webp')] sm:bg-fixed bg-cover bg-center text-center relative">
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 max-w-3xl mx-auto px-4">
             <p className="text-2xl md:text-4xl text-white">

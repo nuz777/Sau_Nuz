@@ -17,7 +17,7 @@ export default function IntroModal() {
   return (
     <Modal isOpen={open} onClose={() => setOpen(false)}>
       <div className="text-center py-4">
-        <img src="/img/pngegg.png" alt="Welcome" className="w-48 mx-auto mb-4" />
+        <img src="/img/pngegg.webp" alt="Welcome" className="w-48 mx-auto mb-4" />
         <h2 className="text-2xl font-semibold text-white mb-4">Bienvenido ^w^</h2>
         <p className="text-zinc-400 mb-2">
           Aquí puedes descargar juegos gratis. Haz clic en cualquier tarjeta para ver detalles y

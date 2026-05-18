@@ -108,7 +108,7 @@ export const games: Game[] = [
   {
     id: "g10",
     title: "Muse Dash",
-    img: "/img/mushe.png",
+    img: "/img/mushe.webp",
     size: "2 GB",
     desc: "Juego rítmico divertido con estilo anime y música dinámica.",
     minReq: "OS: Win 7/10<br/>CPU: Core 2 Duo<br/>RAM: 2 GB<br/>GPU: Intel HD 4000<br/>DirectX: v9",

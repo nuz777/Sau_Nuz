@@ -60,7 +60,7 @@ export const windowsItems: WindowsItem[] = [
   {
     id: "w7",
     title: "Comandos Activar Office",
-    img: "/img/comandoactivar.png",
+    img: "/img/comandoactivar.webp",
     size: "295 KB",
     desc: "Archivo con comandos CMD para activar Office y Windows fácilmente mediante scripts.",
     link: "https://mega.nz/file/tnBywBhK#f0NUpTyRd9Hb7PzGy8tY_qWeC_Wro8mRIHgXjNB4Xf4",
