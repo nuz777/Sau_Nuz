@@ -2,7 +2,7 @@
 
 # Documentación Completa del Proyecto SauNuz
 
-## Descripción General
+## Descripción General Autorizada
 
 **SauNuz Tools** es un sitio web moderno e interactivo creado por **Nuz_v** y **Thempher09**. Este proyecto sirve como portal centralizado para acceder a recursos de programación, juegos y herramientas de software. Ofrece una experiencia visual atractiva con navegación fluida y componentes interactivos.
 
