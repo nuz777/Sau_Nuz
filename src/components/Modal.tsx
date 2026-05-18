@@ -21,7 +21,9 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
           onClick={(e) => {
             if (e.target === e.currentTarget) onClose();
           }}
-          onKeyDown={(e) => { if (e.key === "Escape" || e.key === "Enter" || e.key === " ") onClose(); }}
+          onKeyDown={(e) => {
+            if (e.key === "Escape" || e.key === "Enter" || e.key === " ") onClose();
+          }}
         >
           <motion.div
             className="relative w-[92vw] max-w-[750px] max-h-[85vh] overflow-y-auto bg-black/90 p-6 rounded-2xl shadow-2xl"

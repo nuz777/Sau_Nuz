@@ -30,7 +30,9 @@ export default function WindowsTools() {
             <div
               key={w.id}
               onClick={() => setSelected(w)}
-              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setSelected(w); }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") setSelected(w);
+              }}
               role="button"
               tabIndex={0}
               className="card-stagger fade-in-card border border-zinc-800 p-4 text-center cursor-pointer transition-all duration-300 hover:bg-[#111] hover:-translate-y-1"

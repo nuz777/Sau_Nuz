@@ -9,7 +9,9 @@ export default function GameCard({ game, onClick }: GameCardProps) {
   return (
     <div
       onClick={onClick}
-      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onClick(); }}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") onClick();
+      }}
       role="button"
       tabIndex={0}
       className="card-stagger fade-in-card border border-zinc-800 px-3 py-4 rounded-xl text-center cursor-pointer transition-all duration-300 hover:bg-[#111] hover:-translate-y-1"

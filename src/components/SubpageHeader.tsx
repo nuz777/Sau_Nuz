@@ -91,7 +91,9 @@ export default function SubpageHeader({
         role="button"
         tabIndex={0}
         onClick={() => setSidebarOpen(false)}
-        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setSidebarOpen(false); }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") setSidebarOpen(false);
+        }}
       />
 
       {/* Sidebar */}

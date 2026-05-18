@@ -106,9 +106,7 @@ export default function Home() {
               Programar es perseverancia; al crear, usas tu imaginación, y tu código se convierte en
               el reflejo de tus ideas.
             </p>
-            <p className="mt-4 text-2xl text-blue-500 italic">
-              - Nuz
-            </p>
+            <p className="mt-4 text-2xl text-blue-500 italic">- Nuz</p>
           </div>
         </section>
 

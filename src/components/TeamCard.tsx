@@ -23,7 +23,9 @@ export default function TeamCard({ name, role, img, bio, github }: TeamCardProps
     <div className="w-64 h-[335px] perspective-[1000px]">
       <div
         onClick={() => setFlipped((f) => !f)}
-        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setFlipped((f) => !f); }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") setFlipped((f) => !f);
+        }}
         role="button"
         tabIndex={0}
         className={`relative w-full h-full transition-transform duration-600 [transform-style:preserve-3d] group hover:[transform:rotateY(180deg)] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}

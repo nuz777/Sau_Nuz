@@ -33,7 +33,9 @@ export default function Programming() {
             <div
               key={l.id}
               onClick={() => setSelected(l.id)}
-              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setSelected(l.id); }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") setSelected(l.id);
+              }}
               role="button"
               tabIndex={0}
               className="card-stagger fade-in-card border border-zinc-800 p-4 text-center cursor-pointer transition-all duration-300 hover:bg-[#111] hover:-translate-y-1"

@@ -99,7 +99,9 @@ export default function Header() {
         role="button"
         tabIndex={0}
         onClick={() => setSidebarOpen(false)}
-        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setSidebarOpen(false); }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") setSidebarOpen(false);
+        }}
       />
 
       {/* Sidebar */}
@@ -122,13 +124,13 @@ export default function Header() {
         <nav className="flex flex-col py-4">
           {navLinks.map((link) =>
             link.href.startsWith("/#") ? (
-                <button
-                  key={link.href}
-                  onClick={() => handleNavClick(link.href)}
-                  className="px-6 py-3.5 text-sm text-blue-200/70 hover:text-white hover:bg-blue-900/10 border-l-2 border-transparent hover:border-blue-500 transition-all w-full text-left cursor-pointer"
-                >
-                  {link.label}
-                </button>
+              <button
+                key={link.href}
+                onClick={() => handleNavClick(link.href)}
+                className="px-6 py-3.5 text-sm text-blue-200/70 hover:text-white hover:bg-blue-900/10 border-l-2 border-transparent hover:border-blue-500 transition-all w-full text-left cursor-pointer"
+              >
+                {link.label}
+              </button>
             ) : (
               <Link
                 key={link.href}
