@@ -469,4 +469,4 @@ https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap
 
 **Versión:** Alpha
 **Última actualización:** 2024
-**Estado:** En desarrollo semi-activo
+**Estado:** En desarrollo semi-activo SAUCE
