@@ -8,7 +8,7 @@
 
 ---
 
-## 📁 Estructura del Proyectooo
+## 📁 Estructura del Proyecto
 
 ```
 SAUNUZ_PROJECT/
