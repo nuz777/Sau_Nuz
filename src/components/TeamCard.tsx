@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function GithubIcon({ size = 14, className = "" }: { size?: number; className?: string }) {
   return (
@@ -18,9 +18,21 @@ interface TeamCardProps {
 
 export default function TeamCard({ name, role, img, bio, github }: TeamCardProps) {
   const [flipped, setFlipped] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!flipped) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (cardRef.current && !cardRef.current.contains(e.target as Node)) {
+        setFlipped(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [flipped]);
 
   return (
-    <div className="w-64 h-[335px] perspective-[1000px]">
+    <div ref={cardRef} className="w-64 h-[335px] [perspective:1000px]">
       <div
         onClick={() => setFlipped((f) => !f)}
         onKeyDown={(e) => {
@@ -28,14 +40,30 @@ export default function TeamCard({ name, role, img, bio, github }: TeamCardProps
         }}
         role="button"
         tabIndex={0}
-        className={`relative w-full h-full transition-transform duration-600 [transform-style:preserve-3d] group hover:[transform:rotateY(180deg)] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+        style={{
+          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+          transition: "transform 0.6s",
+          transformStyle: "preserve-3d",
+        }}
+        className="relative w-full h-full cursor-pointer"
       >
-        <div className="absolute inset-0 backface-hidden">
+        {/* Front */}
+        <div
+          style={{ backfaceVisibility: "hidden" }}
+          className="absolute inset-0"
+        >
           <img src={img} alt={name} className="w-full h-[260px] object-cover rounded-lg" />
           <p className="text-center mt-4 font-semibold text-white">{name}</p>
         </div>
 
-        <div className="absolute inset-0 backface-hidden bg-stone-800 text-white text-center rounded-xl p-5 flex items-center [transform:rotateY(180deg)]">
+        {/* Back */}
+        <div
+          style={{
+            backfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+          }}
+          className="absolute inset-0 bg-[#0f1e3a] text-white text-center rounded-xl p-5 flex items-center"
+        >
           <div className="w-full">
             <h3 className="text-xl font-semibold mb-1">{name}</h3>
             <p className="text-xs mb-6">{role}</p>
