@@ -46,8 +46,8 @@ export default function Home() {
                     Enfocado en tus necesidades
                   </h3>
                   <p className="text-xs text-zinc-400 mt-4">
-                    Es frustrante tener que estar buscando en diferentes sitios herramientas utiles,
-                    con SN-TOOLS es diferente.
+                    Es frustrante tener que estar buscando en diferentes sitios
+                    herramientas utiles, con SN-TOOLS es diferente.
                   </p>
                 </div>
                 <div className="text-right relative pr-24">
@@ -78,19 +78,24 @@ export default function Home() {
                   <div className="absolute left-[5px] top-1/2 -translate-y-1/2 size-12 border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center">
                     <Check className="size-5 -rotate-45 text-blue-500" />
                   </div>
-                  <h3 className="text-sm font-semibold text-white uppercase">Calidad</h3>
+                  <h3 className="text-sm font-semibold text-white uppercase">
+                    Calidad
+                  </h3>
                   <p className="text-xs text-zinc-400 mt-4">
-                    Nos enforzamos frecuentemente para ofrecer un ecxelente sofware mediante sitios
-                    o lugares seguros.
+                    Nos enforzamos frecuentemente para ofrecer un ecxelente
+                    sofware mediante sitios o lugares seguros.
                   </p>
                 </div>
                 <div className="text-left relative pl-24">
                   <div className="absolute left-[5px] top-1/2 -translate-y-1/2 size-12 border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center">
                     <List className="size-5 -rotate-45 text-blue-500" />
                   </div>
-                  <h3 className="text-sm font-semibold text-white uppercase">Collection Perfect</h3>
+                  <h3 className="text-sm font-semibold text-white uppercase">
+                    Collection Perfect
+                  </h3>
                   <p className="text-xs text-zinc-400 mt-4">
-                    Los programas eligios posiblemente sean la mejor entre muchas más.
+                    Los programas eligios posiblemente sean la mejor entre
+                    muchas más.
                   </p>
                 </div>
               </div>
@@ -103,8 +108,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 max-w-3xl mx-auto px-4">
             <p className="text-2xl md:text-4xl text-white">
-              Programar es perseverancia; al crear, usas tu imaginación, y tu código se convierte en
-              el reflejo de tus ideas.
+              Programar es perseverancia; al crear, usas tu imaginación, y tu
+              código se convierte en el reflejo de tus ideas.
             </p>
             <p className="mt-4 text-2xl text-blue-500 italic">- Nuz</p>
           </div>
@@ -149,7 +154,9 @@ export default function Home() {
                   <div className="size-[75px] mx-auto border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center mb-6">
                     <item.icon className="size-6 -rotate-45 text-blue-500" />
                   </div>
-                  <h3 className="text-sm font-semibold text-white uppercase mt-8">{item.title}</h3>
+                  <h3 className="text-sm font-semibold text-white uppercase mt-8">
+                    {item.title}
+                  </h3>
                   <p className="text-xs text-zinc-400 mt-6">{item.desc}</p>
                 </div>
               ))}
@@ -184,7 +191,8 @@ export default function Home() {
             </h2>
             <p className="font-share text-sm text-white uppercase tracking-widest mb-8">
               <span className="relative inline-block before:absolute before:-left-8 before:top-1/2 before:-translate-y-1/2 before:w-5 before:h-px before:bg-zinc-600 after:absolute after:-right-8 after:top-1/2 after:-translate-y-1/2 after:w-5 after:h-px after:bg-zinc-600">
-                Aqui tienes unas recomendaciones de sitios (propios) de nuestras SN-TOOLS
+                Aqui tienes unas recomendaciones de sitios (propios) de nuestras
+                SN-TOOLS
               </span>
             </p>
             <Link
@@ -207,15 +215,17 @@ export default function Home() {
             <h2 className="font-share text-3xl md:text-4xl text-white mb-4">
               ¿Te gusta nuestro trabajo? !Contactanos!
             </h2>
-            <p className="text-zinc-300 mb-8">Estaremos atentos ante cualquier inconveniente.</p>
+            <p className="text-zinc-300 mb-8">
+              Estaremos atentos ante cualquier inconveniente.
+            </p>
             <a
-             href="https://mail.google.com/mail/?view=cm&to=ivandavidmejiamendez@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center h-11 px-4 bg-blue-500 text-white text-sm uppercase tracking-wide border border-blue-500 hover:bg-transparent hover:border-white transition-all"
->
-  Contactar
-</a>
+              href="https://mail.google.com/mail/?view=cm&to=ivandavidmejiamendez@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center h-11 px-4 bg-blue-500 text-white text-sm uppercase tracking-wide border border-blue-500 hover:bg-transparent hover:border-white transition-all"
+            >
+              Contactar
+            </a>
           </div>
         </section>
       </main>
