@@ -209,13 +209,13 @@ export default function Home() {
             </h2>
             <p className="text-zinc-300 mb-8">Estaremos atentos ante cualquier inconveniente.</p>
             <a
-              href="mailto:ivandavidmejiamendez@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center h-11 px-4 bg-blue-500 text-white text-sm uppercase tracking-wide border border-blue-500 hover:bg-transparent hover:border-white transition-all"
-            >
-              Contactar
-            </a>
+             href="https://mail.google.com/mail/?view=cm&to=ivandavidmejiamendez@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center h-11 px-4 bg-blue-500 text-white text-sm uppercase tracking-wide border border-blue-500 hover:bg-transparent hover:border-white transition-all"
+>
+  Contactar
+</a>
           </div>
         </section>
       </main>

@@ -125,5 +125,17 @@ export const games: Game[] = [
       "OS: Win Vista/7<br/>CPU: Intel Core 2 Duo 1.8 GHz<br/>RAM: 1.5 GB<br/>GPU: 256 MB VRAM<br/>DirectX: v9",
     recReq: "OS: Win 10<br/>CPU: i5-2500K<br/>RAM: 4 GB<br/>GPU: GTX 760<br/>DirectX: v10",
     link: "https://blizzpaste.com/Games/GT4ACE1.txt",
-  },
+  },  
+
+   {
+    id: "g11",
+    title: "GTA 4",
+    img: "/img/gta4.jpg",
+    size: "16 GB",
+    desc: "Es GTA 5 pero con físicas xd",
+    minReq:
+      "OS: Win Vista/7<br/>CPU: Intel Core 2 Duo 1.8 GHz<br/>RAM: 1.5 GB<br/>GPU: 256 MB VRAM<br/>DirectX: v9",
+    recReq: "OS: Win 10<br/>CPU: i5-2500K<br/>RAM: 4 GB<br/>GPU: GTX 760<br/>DirectX: v10",
+    link: "https://blizzpaste.com/Games/GT4ACE1.txt",
+  },  
 ];
