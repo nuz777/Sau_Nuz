@@ -13,4 +13,5 @@ export const team = [
     bio: "Experto en moderación de plataformas como Telegram y WhatsApp y ciberseguridad.",
     github: "https://github.com/Themper09",
   },
+
 ];

@@ -37,8 +37,7 @@ export const games: Game[] = [
     size: "114 GB",
     desc: "Aventura épica basada en la mitología nórdica con Kratos y Atreus.",
     minReq: "OS: Win 10 64-bit<br/>CPU: i5-6600K<br/>RAM: 8 GB<br/>GPU: GTX 1060<br/>DirectX: v11",
-    recReq:
-      "OS: Win 11 64-bit<br/>CPU: Ryzen 7 3700X<br/>RAM: 16 GB<br/>GPU: RTX 3080<br/>DirectX: v12",
+    recReq: "OS: Win 11 64-bit<br/>CPU: Ryzen 7 3700X<br/>RAM: 16 GB<br/>GPU: RTX 3080<br/>DirectX: v12",
     link: "https://filekeeper.net/download",
   },
   {
@@ -67,8 +66,7 @@ export const games: Game[] = [
     img: "/img/ets2.jpg",
     size: "15 GB",
     desc: "Simulador de camiones por toda Europa con gestión de empresa.",
-    minReq:
-      "OS: Win 7/8/10<br/>CPU: Dual Core 2.4 GHz<br/>RAM: 4 GB<br/>GPU: GeForce GTS 450<br/>DirectX: v9",
+    minReq: "OS: Win 7/8/10<br/>CPU: Dual Core 2.4 GHz<br/>RAM: 4 GB<br/>GPU: GeForce GTS 450<br/>DirectX: v9",
     recReq: "OS: Win 10/11<br/>CPU: i7-4770<br/>RAM: 8 GB<br/>GPU: GTX 1060<br/>DirectX: v11",
     link: "https://blizzpaste.com/Games/EUROTRS1.txt",
   },
@@ -78,8 +76,7 @@ export const games: Game[] = [
     img: "/img/f1.jpg",
     size: "10 GB",
     desc: "Simulación oficial de Fórmula 1 con todos los equipos y circuitos.",
-    minReq:
-      "OS: Win 7/8<br/>CPU: Core 2 Quad Q8400<br/>RAM: 4 GB<br/>GPU: GTX 460<br/>DirectX: v11",
+    minReq: "OS: Win 7/8<br/>CPU: Core 2 Quad Q8400<br/>RAM: 4 GB<br/>GPU: GTX 460<br/>DirectX: v11",
     recReq: "OS: Win 7/8/10<br/>CPU: i5-4670<br/>RAM: 8 GB<br/>GPU: GTX 760<br/>DirectX: v11",
     link: "https://www.reddit.com/r/abandonware/comments/1962vy4/f1_2013_to_f1_2020_download_links/?tl=es-419",
   },
@@ -89,10 +86,8 @@ export const games: Game[] = [
     img: "/img/Metro.jpg",
     size: "20 GB",
     desc: "Shooter postapocalíptico con historia profunda y supervivencia.",
-    minReq:
-      "OS: Win 7 64-bit<br/>CPU: Dual Core 2.2 GHz<br/>RAM: 2 GB<br/>GPU: GTX 480<br/>DirectX: v11",
-    recReq:
-      "OS: Win 10 64-bit<br/>CPU: Quad Core 2.6 GHz<br/>RAM: 8 GB<br/>GPU: GTX 970<br/>DirectX: v11",
+    minReq: "OS: Win 7 64-bit<br/>CPU: Dual Core 2.2 GHz<br/>RAM: 2 GB<br/>GPU: GTX 480<br/>DirectX: v11",
+    recReq: "OS: Win 10 64-bit<br/>CPU: Quad Core 2.6 GHz<br/>RAM: 8 GB<br/>GPU: GTX 970<br/>DirectX: v11",
     link: "https://www.mediafire.com/file/eiupwbgb8gdvag1",
   },
   {
@@ -121,21 +116,41 @@ export const games: Game[] = [
     img: "/img/gta4.jpg",
     size: "16 GB",
     desc: "Es GTA 5 pero con físicas xd",
-    minReq:
-      "OS: Win Vista/7<br/>CPU: Intel Core 2 Duo 1.8 GHz<br/>RAM: 1.5 GB<br/>GPU: 256 MB VRAM<br/>DirectX: v9",
+    minReq: "OS: Win Vista/7<br/>CPU: Intel Core 2 Duo 1.8 GHz<br/>RAM: 1.5 GB<br/>GPU: 256 MB VRAM<br/>DirectX: v9",
     recReq: "OS: Win 10<br/>CPU: i5-2500K<br/>RAM: 4 GB<br/>GPU: GTX 760<br/>DirectX: v10",
     link: "https://blizzpaste.com/Games/GT4ACE1.txt",
-  },  
+  },
 
    {
-    id: "g11",
+    id: "g12",
     title: "GTA 4",
     img: "/img/gta4.jpg",
     size: "16 GB",
     desc: "Es GTA 5 pero con físicas xd",
-    minReq:
-      "OS: Win Vista/7<br/>CPU: Intel Core 2 Duo 1.8 GHz<br/>RAM: 1.5 GB<br/>GPU: 256 MB VRAM<br/>DirectX: v9",
+    minReq: "OS: Win Vista/7<br/>CPU: Intel Core 2 Duo 1.8 GHz<br/>RAM: 1.5 GB<br/>GPU: 256 MB VRAM<br/>DirectX: v9",
     recReq: "OS: Win 10<br/>CPU: i5-2500K<br/>RAM: 4 GB<br/>GPU: GTX 760<br/>DirectX: v10",
     link: "https://blizzpaste.com/Games/GT4ACE1.txt",
-  },  
+  },
+
+   {
+    id: "g13",
+    title: "GTA 4",
+    img: "/img/gta4.jpg",
+    size: "16 GB",
+    desc: "Es GTA 5 pero con físicas xd",
+    minReq: "OS: Win Vista/7<br/>CPU: Intel Core 2 Duo 1.8 GHz<br/>RAM: 1.5 GB<br/>GPU: 256 MB VRAM<br/>DirectX: v9",
+    recReq: "OS: Win 10<br/>CPU: i5-2500K<br/>RAM: 4 GB<br/>GPU: GTX 760<br/>DirectX: v10",
+    link: "https://blizzpaste.com/Games/GT4ACE1.txt",
+  },
+
+   {
+    id: "g15",
+    title: "GTA 4",
+    img: "/img/gta4.jpg",
+    size: "16 GB",
+    desc: "Es GTA 5 pero con físicas xd",
+    minReq: "OS: Win Vista/7<br/>CPU: Intel Core 2 Duo 1.8 GHz<br/>RAM: 1.5 GB<br/>GPU: 256 MB VRAM<br/>DirectX: v9",
+    recReq: "OS: Win 10<br/>CPU: i5-2500K<br/>RAM: 4 GB<br/>GPU: GTX 760<br/>DirectX: v10",
+    link: "https://blizzpaste.com/Games/GT4ACE1.txt",
+  },
 ];
