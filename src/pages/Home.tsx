@@ -172,7 +172,7 @@ export default function Home() {
             </h2>
             <p className="font-share text-sm text-white uppercase tracking-widest mb-12">
               <span className="relative inline-block before:absolute before:-left-8 before:top-1/2 before:-translate-y-1/2 before:w-5 before:h-px before:bg-zinc-600 after:absolute after:-right-8 after:top-1/2 after:-translate-y-1/2 after:w-5 after:h-px after:bg-zinc-600">
-                Este es el equipo finder.
+                Este es el equipo finder. 
               </span>
             </p>
             <div className="flex justify-center gap-8 flex-wrap">

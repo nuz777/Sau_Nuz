@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import PortfolioModal from "./PortfolioModal";
 
 function GithubIcon({ size = 14, className = "" }: { size?: number; className?: string }) {
   return (
@@ -18,6 +19,7 @@ interface TeamCardProps {
 
 export default function TeamCard({ name, role, img, bio, github }: TeamCardProps) {
   const [flipped, setFlipped] = useState(false);
+  const [showPortfolio, setShowPortfolio] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,58 +33,91 @@ export default function TeamCard({ name, role, img, bio, github }: TeamCardProps
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [flipped]);
 
-  return (
-    <div ref={cardRef} className="w-64 h-[335px] [perspective:1000px]">
-      <div
-        onClick={() => setFlipped((f) => !f)}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") setFlipped((f) => !f);
-        }}
-        role="button"
-        tabIndex={0}
-        style={{
-          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
-          transition: "transform 0.6s",
-          transformStyle: "preserve-3d",
-        }}
-        className="relative w-full h-full cursor-pointer"
-      >
-        {/* Front */}
-        <div
-          style={{ backfaceVisibility: "hidden" }}
-          className="absolute inset-0"
-        >
-          <img src={img} alt={name} className="w-full h-[260px] object-cover rounded-lg" />
-          <p className="text-center mt-4 font-semibold text-white">{name}</p>
-        </div>
+  const handleImageClick = () => {
+    setShowPortfolio(true);
+  };
 
-        {/* Back */}
+  return (
+    <>
+      <PortfolioModal
+        isOpen={showPortfolio}
+        onClose={() => setShowPortfolio(false)}
+        name={name}
+        role={role}
+        img={img}
+        bio={bio}
+        github={github}
+      />
+      <div ref={cardRef} className="w-64 h-[335px] [perspective:1000px]">
         <div
-          style={{
-            backfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
+          onClick={() => setFlipped((f) => !f)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") setFlipped((f) => !f);
           }}
-          className="absolute inset-0 bg-[#0f1e3a] text-white text-center rounded-xl p-5 flex items-center"
+          role="button"
+          tabIndex={0}
+          style={{
+            transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+            transition: "transform 0.6s",
+            transformStyle: "preserve-3d",
+          }}
+          className="relative w-full h-full cursor-pointer"
         >
-          <div className="w-full">
-            <h3 className="text-xl font-semibold mb-1">{name}</h3>
-            <p className="text-xs mb-6">{role}</p>
-            <div className="w-8 h-px bg-white mx-auto mb-6" />
-            <p className="text-xs leading-relaxed">{bio}</p>
-            <div className="flex justify-center gap-2 mt-8">
-              <a
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="inline-flex items-center justify-center size-8 border border-zinc-400 rotate-45 hover:bg-white hover:text-blue-500 transition-all"
-              >
-                <GithubIcon size={14} className="-rotate-45" />
-              </a>
+          {/* Front */}
+          <div
+            style={{ backfaceVisibility: "hidden" }}
+            className="absolute inset-0"
+          >
+            <div
+              onClick={(e) => {
+                e.stopPropagation();
+                setFlipped(false);
+                setTimeout(() => handleImageClick(), 300);
+              }}
+              className="relative group cursor-pointer overflow-hidden rounded-lg"
+            >
+              <img
+                src={img}
+                alt={name}
+                className="w-full h-[260px] object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0  group-hover:bg-transparent/40 transition-colors duration-300 flex items-center justify-center">
+                <span className="text-black font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Hi
+                </span>
+              </div>
+            </div>
+            <p className="text-center mt-4 font-semibold text-white">{name}</p>
+          </div>
+
+          {/* Back */}
+          <div
+            style={{
+              backfaceVisibility: "hidden",
+              transform: "rotateY(180deg)",
+            }}
+            className="absolute inset-0 bg-[#0f1e3a] text-white text-center rounded-xl p-5 flex items-center"
+          >
+            <div className="w-full">
+              <h3 className="text-xl font-semibold mb-1">{name}</h3>
+              <p className="text-xs mb-6">{role}</p>
+              <div className="w-8 h-px bg-white mx-auto mb-6" />
+              <p className="text-xs leading-relaxed">{bio}</p>
+              <div className="flex justify-center gap-2 mt-8">
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="inline-flex items-center justify-center size-8 border border-zinc-400 rotate-45 hover:bg-white hover:text-blue-500 transition-all"
+                >
+                  <GithubIcon size={14} className="-rotate-45" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

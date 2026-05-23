@@ -27,13 +27,13 @@ export default function Tools() {
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-blue-500/15 rounded-2xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  rounded-2xl overflow-hidden">
             {toolCategories.map((cat) => (
               <Link
                 key={cat.num}
                 href={cat.route}
                 onClick={() => window.scrollTo({ top: 0 })}
-                className="tool-card-anim group relative bg-[#05080f]  flex flex-col text-inherit no-underline min-h-[320px] transition-colors duration-300  hover:bg-[#080d18] before:absolute before:top-0 before:left-0 before:right-0 before:h-0.5 before:bg-gradient-to-r before:from-blue-400 before:to-cyan-400 before:scale-x-0 before:origin-left before:transition-transform before:duration-400 before:ease-[cubic-bezier(.16,1,.3,1)] hover:before:scale-x-100 after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_50%_0%,rgba(14,165,233,.06)_0%,transparent_60%)] after:opacity-0 after:transition-opacity after:duration-400 hover:after:opacity-100"
+                className="tool-card-anim group relative bg-gray  flex flex-col text-inherit no-underline min-h-[320px] transition-colors duration-300  hover:bg-[#080d18] before:absolute before:top-0 before:left-0 before:right-0 before:h-0.5 before:bg-gradient-to-r before:from-blue-400 before:to-cyan-400 before:scale-x-0 before:origin-left before:transition-transform before:duration-400 before:ease-[cubic-bezier(.16,1,.3,1)] hover:before:scale-x-100 after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_50%_0%,rgba(14,165,233,.06)_0%,transparent_60%)] after:opacity-0 after:transition-opacity after:duration-400 hover:after:opacity-100"
               >
                 <div className="relative overflow-hidden flex-shrink-0">
                   <img

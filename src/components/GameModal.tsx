@@ -15,10 +15,10 @@ export default function GameModal({ game, onClose }: GameModalProps) {
         <img
           src={game.img}
           alt={game.title}
-          className=" h-auto max-h-[50vh] object-contain rounded-xl md:row-span-full"
+          className="w-full h-auto max-h-[70vh] object-cover rounded-xl md:w-2/5"
         />
 
-        <div className="md:col-start-2">
+        <div className="md:col-start-2 md:w-3/5">
           <h2 className="text-xl font-semibold text-white mb-2">{game.title}</h2>
           <p className="text-zinc-400 text-sm mb-2">{game.desc}</p>
           <p className="text-white text-sm font-semibold mb-4">

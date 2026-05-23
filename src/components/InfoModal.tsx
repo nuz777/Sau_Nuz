@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { X } from "lucide-react";
 
-export default function IntroModal() {
+export default function InfoModal() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (!localStorage.getItem("introVisto")) {
+    if (!localStorage.getItem("infoVisto")) {
       const timer = setTimeout(() => {
         setOpen(true);
-        localStorage.setItem("introVisto", "true");
-      }, 500);
+        localStorage.setItem("infoVisto", "true");
+      }, 2500);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -52,14 +52,17 @@ export default function IntroModal() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
-              <img src="/img/nuz (2).jpg" alt="Welcome" className="w-40 mx-auto mb-4" />
-              <h2 className="text-3xl font-bold text-blue-500 mb-4">¡Bienvenido!</h2>
+              <img src="/img/nuz (2).jpg" alt="Info" className="w-40 mx-auto mb-4" />
+              <h2 className="text-3xl font-bold text-blue-500 mb-4"> ¡Hola! <cite>Finder</cite></h2>
               <p className="text-zinc-300 mb-4">
-                Aquí puedes descargar tools & games gratis, ve a la secciones de SN-TOOLS para ver detalles y
-                descargar. Recuerda leer el manual =]
+                Puedes explorar nuestras secciones de herramientas de programación, utilidades de Windows y mucho más. Ten en 
+                cuenta que estos juegos han sido probados y testeados por Nuz, garantizando su seguridad y funcionamiento.
+              </p>
+              <p className="text-zinc-300 mb-4">
+                Si encuentras algún problema o tienes sugerencias, no dudes en contactarnos.
               </p>
               <p className="text-yellow-500 text-sm mb-6">
-                ⚠️ Este proyecto sigue en fase alpha, es normal ver errores.
+                OJO! Visita regularmente para ver nuevos contenidos.
               </p>
               <motion.button
                 onClick={() => setOpen(false)}
@@ -69,7 +72,7 @@ export default function IntroModal() {
                 transition={{ delay: 0.4 }}
                 whileHover={{ scale: 1.05 }}
               >
-                Entendido
+                Gracias Nuz
               </motion.button>
             </motion.div>
           </motion.div>
