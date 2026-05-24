@@ -87,7 +87,25 @@ export default function TeamCard({ name, role, img, bio, github }: TeamCardProps
                 </span>
               </div>
             </div>
-            <p className="text-center mt-4 font-semibold text-white">{name}</p>
+            <span
+              onClick={(e) => {
+                e.stopPropagation();
+                setFlipped(false);
+                setTimeout(() => handleImageClick(), 300);
+              }}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.stopPropagation();
+                  setFlipped(false);
+                  setTimeout(() => handleImageClick(), 300);
+                }
+              }}
+              className="text-center mt-4 font-semibold text-white block cursor-pointer"
+            >
+              {name}
+            </span>
           </div>
 
           {/* Back */}

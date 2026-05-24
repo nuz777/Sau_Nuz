@@ -64,7 +64,7 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center items-center py-8">
-                <div className="relative size-[230px] rotate-45 shadow-[10px_10px_0_0_transparent]">
+                <div className="relative size-57.5 rotate-45 shadow-[10px_10px_0_0_transparent]">
                   <img
                     src="/img/code.webp"
                     alt="Code"

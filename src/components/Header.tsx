@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 
@@ -13,11 +13,18 @@ const navLinks = [
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const prevScrollRef = useRef(0);
   const [location] = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 50);
+      setHidden(y > prevScrollRef.current && y > 80);
+      prevScrollRef.current = y;
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -47,6 +54,8 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          hidden ? "-translate-y-full" : "translate-y-0"
+        } ${
           scrolled ? "bg-black/30 backdrop-blur-md" : "bg-black/90"
         }`}
       >
@@ -148,7 +157,7 @@ export default function Header() {
               >
                 {link.label}
               </Link>
-            ),
+            )
           )}
         </nav>
       </div>
