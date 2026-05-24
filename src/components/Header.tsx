@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 
@@ -12,22 +12,8 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const prevScrollRef = useRef(0);
   const [location] = useLocation();
-
-  useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY;
-      setScrolled(y > 50);
-      setHidden(y > prevScrollRef.current && y > 80);
-      prevScrollRef.current = y;
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = sidebarOpen ? "hidden" : "";
@@ -53,18 +39,14 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          hidden ? "-translate-y-full" : "translate-y-0"
-        } ${
-          scrolled ? "bg-black/30 backdrop-blur-md" : "bg-black/90"
-        }`}
+        className="fixed top-2 md:top-4 left-1/2 z-50 w-[calc(100vw-0.75rem)] md:w-[calc(100vw-2rem)] max-w-5xl -translate-x-1/2 rounded-xl md:rounded-2xl border border-white/10 shadow-lg shadow-black/20 bg-black/30 backdrop-blur-md"
       >
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
-          <Link href="/" className="text-white text-2xl uppercase font-varela tracking-wide">
+        <div className="px-3 md:px-4 flex items-center justify-between h-14 md:h-16">
+          <Link href="/" className="text-white text-xl md:text-2xl uppercase font-varela tracking-wide">
             SauNuz
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-5">
             {navLinks.map((link) =>
               link.href.startsWith("/#") ? (
                 <button
@@ -73,38 +55,39 @@ export default function Header() {
                     const id = link.href.slice(2);
                     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="text-white/80 hover:text-white text-sm uppercase tracking-wider border-b-2 border-transparent hover:border-white transition-all pb-0.5 cursor-pointer"
+                  className="relative text-white/80 hover:text-white text-sm uppercase tracking-wider cursor-pointer group pb-1"
                 >
                   {link.label}
+                  <span className="absolute -bottom-px left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full" />
                 </button>
               ) : (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => window.scrollTo({ top: 0 })}
-                  className={`text-sm uppercase tracking-wider border-b-2 transition-all pb-0.5 ${
-                    location === link.href
-                      ? "text-white border-white"
-                      : "text-white/80 border-transparent hover:text-white hover:border-white"
+                  className={`relative text-sm uppercase tracking-wider group pb-1 ${
+                    location === link.href ? "text-white" : "text-white/80 hover:text-white"
                   }`}
                 >
                   {link.label}
+                  <span className={`absolute -bottom-px left-0 h-px bg-white transition-all duration-300 ${
+                    location === link.href ? "w-full" : "w-0 group-hover:w-full"
+                  }`} />
                 </Link>
               ),
             )}
           </nav>
 
           <button
-            className="md:hidden text-blue-500 p-2"
+            className="md:hidden text-blue-500 hover:text-blue-300 p-1.5 rounded-lg transition-colors"
             onClick={() => setSidebarOpen(true)}
             aria-label="Abrir menú"
           >
-            <Menu size={24} />
+            <Menu size={22} />
           </button>
         </div>
       </header>
 
-      {/* Backdrop */}
       <div
         className={`fixed inset-0 z-40 bg-black/60 transition-opacity duration-300 md:hidden ${
           sidebarOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -117,17 +100,16 @@ export default function Header() {
         }}
       />
 
-      {/* Sidebar */}
       <div
         className={`fixed top-0 right-0 z-50 h-full w-64 bg-black/50 backdrop-blur-xl border-l border-blue-900/30 transform transition-transform duration-300 ease-in-out md:hidden ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between px-5 h-16 border-b border-blue-900/20">
-          <span className="text-white text-sm uppercase tracking-wider">Menú</span>
+        <div className="flex items-center justify-between px-6 h-16 border-b border-white/10">
+          <span className="text-white text-sm uppercase tracking-widest font-medium">Menú</span>
           <button
             onClick={() => setSidebarOpen(false)}
-            className="text-blue-500 p-1"
+            className="text-blue-500 hover:text-blue-300 p-1.5 rounded-lg transition-colors"
             aria-label="Cerrar menú"
           >
             <X size={22} />
