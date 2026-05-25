@@ -15,6 +15,7 @@ import IntroModal from "../components/IntroModal";
 import { team } from "../data/team";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import YouTubeEmbed from "../components/YouTubeEmbed";
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 items-start mt-17.5">
               <div className="space-y-8">
                 <div className="text-right relative pr-24">
-                  <div className="absolute right-[5px] top-1/2 -translate-y-1/2 size-12 border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center">
+                  <div className="absolute right-1.25 top-1/2 -translate-y-1/2 size-12 border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center">
                     <Calendar className="size-5 -rotate-45 text-blue-500" />
                   </div>
                   <h3 className="text-sm font-semibold text-white uppercase">
@@ -51,7 +52,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="text-right relative pr-24">
-                  <div className="absolute right-[5px] top-1/2 -translate-y-1/2 size-12 border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center">
+                  <div className="absolute right-1.25 top-1/2 -translate-y-1/2 size-12 border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center">
                     <MessageCircle className="size-5 -rotate-45 text-blue-500" />
                   </div>
                   <h3 className="text-sm font-semibold text-white uppercase">
@@ -75,7 +76,7 @@ export default function Home() {
 
               <div className="space-y-8">
                 <div className="text-left relative pl-24">
-                  <div className="absolute left-[5px] top-1/2 -translate-y-1/2 size-12 border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center">
+                  <div className="absolute left-1.25 top-1/2 -translate-y-1/2 size-12 border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center">
                     <Check className="size-5 -rotate-45 text-blue-500" />
                   </div>
                   <h3 className="text-sm font-semibold text-white uppercase">
@@ -87,7 +88,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="text-left relative pl-24">
-                  <div className="absolute left-[5px] top-1/2 -translate-y-1/2 size-12 border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center">
+                  <div className="absolute left-1.25 top-1/2 -translate-y-1/2 size-12 border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center">
                     <List className="size-5 -rotate-45 text-blue-500" />
                   </div>
                   <h3 className="text-sm font-semibold text-white uppercase">
@@ -151,7 +152,7 @@ export default function Home() {
                 },
               ].map((item) => (
                 <div key={item.title}>
-                  <div className="size-[75px] mx-auto border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center mb-6">
+                  <div className="size-18.75 mx-auto border border-zinc-300 rotate-45 shadow-[4px_4px_0_0_#ddd] flex items-center justify-center mb-6">
                     <item.icon className="size-6 -rotate-45 text-blue-500" />
                   </div>
                   <h3 className="text-sm font-semibold text-white uppercase mt-8">
@@ -198,10 +199,41 @@ export default function Home() {
             <Link
               href="/tools"
               onClick={() => window.scrollTo({ top: 0 })}
-              className="inline-flex items-center justify-center w-[190px] h-14 bg-white/5 text-blue-400 text-sm font-semibold tracking-wider rounded-xl border border-blue-500/45 backdrop-blur-md shadow-[0_0_20px_rgba(0,132,255,0.12)] hover:bg-blue-500/20 hover:text-blue-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(0,132,255,0.35)] active:scale-97 transition-all"
+              className="inline-flex items-center justify-center w-47.5 h-14 bg-white/5 text-blue-400 text-sm font-semibold tracking-wider rounded-xl border border-blue-500/45 backdrop-blur-md shadow-[0_0_20px_rgba(0,132,255,0.12)] hover:bg-blue-500/20 hover:text-blue-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(0,132,255,0.35)] active:scale-97 transition-all"
             >
               Explorar Herramienta
             </Link>
+          </div>
+        </section>
+
+        {/* Video section */}
+        <section id="video" className="py-24 scroll-mt-20">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="font-share text-3xl md:text-4xl text-blue-500 text-center uppercase mb-2">
+             Introducción
+            </h2>
+            <p className="font-share text-center text-sm text-white uppercase tracking-widest mb-12">
+              <span className="relative inline-block before:absolute before:-left-8 before:top-1/2 before:-translate-y-1/2 before:w-5 before:h-px before:bg-zinc-600 after:absolute after:-right-8 after:top-1/2 after:-translate-y-1/2 after:w-5 after:h-px after:bg-zinc-600">
+                Video Demostrativo
+              </span>
+            </p>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              <YouTubeEmbed videoId="i2Q08d67oRs" />
+
+              <div className="space-y-6">
+                <h3 className="font-share text-2xl md:text-3xl text-white uppercase">
+                  Sé bienvenido a <span className="text-blue-500">Sau-nuz</span>, tu destino para herramientas y juegos.
+                </h3>
+                <p className="text-sm text-zinc-400 leading-relaxed">
+                 Una pequeña introduccion a lo que es este sitio, sus funciones y como usarlo, 
+                 te invitamos a verlo para que puedas conocer mas sobre nosotros y lo que ofrecemos.
+                </p>
+                <p className="text-sm text-zinc-500 leading-relaxed">
+                  Créditos a Themper09
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 

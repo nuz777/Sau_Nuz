@@ -8,6 +8,7 @@ const navLinks = [
   { href: "/#about", label: "About" },
   { href: "/#team", label: "Team" },
   { href: "/#works", label: "SN-TOOLS" },
+  { href: "/#video", label: "Video" },
   { href: "/#contact", label: "Contacto" },
 ];
 
