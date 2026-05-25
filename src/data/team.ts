@@ -1,7 +1,7 @@
 export const team = [
   {
     name: "Nuz_v",
-    role: "Junior Developer",
+    role: "Ceo Of Sau-Nuz",
     img: "/img/nuz (2).jpg",
     bio: "Es un aficionado del rally, amante de los videojuegos motorsport y es un viciado programando.",
     github: "https://github.com/nuz777",

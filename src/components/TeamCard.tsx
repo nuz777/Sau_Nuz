@@ -79,11 +79,12 @@ export default function TeamCard({ name, role, img, bio, github }: TeamCardProps
               <img
                 src={img}
                 alt={name}
+                role={role}
                 className="w-full h-[260px] object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0  group-hover:bg-transparent/40 transition-colors duration-300 flex items-center justify-center">
-                <span className="text-black font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Hi
+              <div className="absolute inset-0  group-hover:bg-black/60 transition-colors duration-300 flex items-center justify-center">
+                <span className="text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {role}
                 </span>
               </div>
             </div>
