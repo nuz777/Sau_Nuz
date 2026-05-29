@@ -42,6 +42,13 @@
   }
 }
 
+@keyframes fadeLeftRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes homeArrowDown {
   from {
     transform: translate3d(0, 0, 0);
@@ -79,10 +86,10 @@
   animation-play-state: paused;
 }
 
-.fade-in-card {
+.fade-in-left-right {
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.5s ease forwards;
+  transform: translateX(-60px);
+  animation: fadeLeftRight 0.8s ease-out forwards;
 }
 
 .card-stagger:nth-child(1) {

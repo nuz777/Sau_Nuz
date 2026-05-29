@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import PortfolioModal from "./PortfolioModal";
 
 function GithubIcon({ size = 14, className = "" }: { size?: number; className?: string }) {
@@ -39,15 +40,18 @@ export default function TeamCard({ name, role, img, bio, github }: TeamCardProps
 
   return (
     <>
-      <PortfolioModal
-        isOpen={showPortfolio}
-        onClose={() => setShowPortfolio(false)}
-        name={name}
-        role={role}
-        img={img}
-        bio={bio}
-        github={github}
-      />
+      {createPortal(
+        <PortfolioModal
+          isOpen={showPortfolio}
+          onClose={() => setShowPortfolio(false)}
+          name={name}
+          role={role}
+          img={img}
+          bio={bio}
+          github={github}
+        />,
+        document.body
+      )}
       <div ref={cardRef} className="w-64 h-[335px] [perspective:1000px]">
         <div
           onClick={() => setFlipped((f) => !f)}

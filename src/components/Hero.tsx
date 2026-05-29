@@ -1,5 +1,17 @@
 import { ChevronsDown } from "lucide-react";
 
+function Background() {
+    return (
+      
+        <div className="hidden sm:block absolute -left-30 right-0 top-0 w-full z-10">
+          <div className="absolute left-30 bg-[#445bd5] h-dvh w-dvw z-1" />
+          <img src="/hero/yui.png" alt="Yui" className="absolute left-30 fade-in-left-right object-cover h-dvh z-10" />
+          <img src="/hero/blue.png" alt="Yui" className="absolute left-29 object-cover h-dvh z-5" />
+          <img src="/hero/white.png" alt="Yui" className="absolute inset-0 object-cover h-dvh w-full z-1" />
+         </div> 
+    );
+}
+
 export default function Hero() {
   return (
     <section
@@ -7,17 +19,7 @@ export default function Hero() {
       className="relative h-screen w-full flex items-center justify-center overflow-hidden"
     >
       {/* Desktop video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover hidden md:block"
-        style={{ zIndex: 2 }}
-      >
-        <source src="/video/herotest.mp4" type="video/mp4" />
-      </video>
-
+      <Background />
       {/* Mobile fallback image */}
       <div
         className="mobile-bg absolute inset-0 bg-cover bg-center"
@@ -28,10 +30,10 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/50" style={{ zIndex: 3 }} />
 
       <div className="relative z-10 text-center px-4">
-        <h1 className="typing-animate font-share text-4xl md:text-5xl text-blue-400 inline-block overflow-hidden whitespace-nowrap border-r-3 border-blue-400">
+        <h1 className="typing-animate font-share font-bold text-4xl md:text-5xl text-blue-200 inline-block overflow-hidden whitespace-nowrap border-r-3 border-blue-400">
           &lt; Saunuz Tools /&gt;
         </h1>
-        <p className="font-share text-zinc-400 mt-8 text-sm md:text-base uppercase tracking-wide opacity-0 animate-[fadeUp_1s_ease_0.6s_forwards]">
+        <p className="font-share text-zinc-10 mt-8 text-sm md:text-base uppercase tracking-wide opacity-0 animate-[fadeUp_1s_ease_0.6s_forwards]">
           Hecho por Nuz_v &amp; Thempher09.
         </p>
       </div>

@@ -2,8 +2,8 @@ export const team = [
   {
     name: "Nuz_v",
     role: "Ceo Of Sau-Nuz",
-    img: "/img/nuz (2).jpg",
-    bio: "Es un aficionado del rally, amante de los videojuegos motorsport y es un viciado programando.",
+    img: "/img/Nuz.png",
+    bio: "Estudiante de programación, con conocimientos robustos en desarrollo software junior, frontend (React y javascript) backend con python, y en proceso con C#.",
     github: "https://github.com/nuz777",
   },
   {
@@ -12,6 +12,20 @@ export const team = [
     img: "/img/sauce2.jpg",
     bio: "Experto en moderación de plataformas como Telegram y WhatsApp y ciberseguridad.",
     github: "https://github.com/Themper09",
+  },
+  {
+    name: "Gaseosa con pan",
+    role: "Colaborador",
+    img: "/img/gaseosa.jpeg",
+    bio: "Apoyó en juegos android.",
+    github: "https://github.com",
+  },
+  {
+    name: "Contribuidor 2",
+    role: "Colaborador",
+    img: "/img/placeholder2.jpg",
+    bio: "Descripción del contribuidor.",
+    github: "https://github.com",
   },
 
 ];

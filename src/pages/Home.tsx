@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import {
   Calendar,
   MessageCircle,
@@ -7,6 +8,8 @@ import {
   Code,
   Settings,
   Users,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { Link } from "wouter";
 import Hero from "../components/Hero";
@@ -16,6 +19,76 @@ import { team } from "../data/team";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import YouTubeEmbed from "../components/YouTubeEmbed";
+
+function Carousel() {
+  const ref = useRef<HTMLDivElement>(null);
+  const xRef = useRef(0);
+  const rafRef = useRef<number>();
+  const moving = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const step = () => {
+      if (moving.current) { rafRef.current = requestAnimationFrame(step); return; }
+      xRef.current -= 1;
+      const half = el.scrollWidth / 2;
+      if (Math.abs(xRef.current) >= half) xRef.current = 0;
+      el.style.transform = `translateX(${xRef.current}px)`;
+      rafRef.current = requestAnimationFrame(step);
+    };
+    rafRef.current = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(rafRef.current!);
+  }, []);
+
+  const slide = (dir: number) => {
+    const el = ref.current;
+    if (!el || moving.current) return;
+    moving.current = true;
+
+    xRef.current -= dir * 280;
+    const half = el.scrollWidth / 2;
+    if (Math.abs(xRef.current) >= half) xRef.current = 0;
+    if (xRef.current > 0) xRef.current = -(half - 280);
+
+    el.style.transition = "transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+    el.style.transform = `translateX(${xRef.current}px)`;
+
+    el.addEventListener("transitionend", () => {
+      el.style.transition = "none";
+      moving.current = false;
+    }, { once: true });
+  };
+
+  return (
+    <div className="relative">
+      <div className="absolute inset-y-0 left-0 w-20 z-10 bg-gradient-to-r from-[#0a0a0f] to-transparent pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-20 z-10 bg-gradient-to-l from-[#0a0a0f] to-transparent pointer-events-none" />
+      <div className="overflow-hidden max-w-5xl mx-auto">
+        <div ref={ref} className="flex gap-6">
+          <div className="flex gap-6 shrink-0">
+            {team.map((m) => <TeamCard key={m.name} {...m} />)}
+          </div>
+          <div className="flex gap-6 shrink-0">
+            {team.map((m) => <TeamCard key={m.name} {...m} />)}
+          </div>
+        </div>
+      </div>
+      <button
+        onClick={() => slide(-1)}
+        className="absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition-all"
+      >
+        <ChevronLeft size={22} />
+      </button>
+      <button
+        onClick={() => slide(1)}
+        className="absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition-all"
+      >
+        <ChevronRight size={22} />
+      </button>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -176,11 +249,7 @@ export default function Home() {
                 Este es el equipo finder. 
               </span>
             </p>
-            <div className="flex justify-center gap-8 flex-wrap">
-              {team.map((member) => (
-                <TeamCard key={member.name} {...member} />
-              ))}
-            </div>
+            <Carousel />
           </div>
         </section>
 
