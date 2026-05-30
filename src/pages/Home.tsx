@@ -231,7 +231,7 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center items-center py-8">
-                <div className="relative size-57.5 rotate-45 shadow-[10px_10px_0_0_transparent]">
+                <div className="relative size-57.5 shadow-[10px_10px_0_0_transparent] animate-spin-slow">
                   <img
                     src="/img/icon12.png"
                     alt="Code"
@@ -347,13 +347,14 @@ export default function Home() {
         </section>
 
         {/* Tools CTA */}
-        <section id="works" className="py-24 scroll-mt-20">
-          <div ref={toolsRef} className={`max-w-6xl mx-auto px-4 text-center transition-all duration-700 ${toolsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        <section id="works" className="py-36 bg-[url('/img/SN-tools.jpg')] sm:bg-fixed bg-cover bg-center text-center relative scroll-mt-20">
+          <div className="absolute inset-0 bg-black/50" />
+          <div ref={toolsRef} className={`relative z-10 max-w-6xl mx-auto px-4 text-center transition-all duration-700 ${toolsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <h2 className="font-share text-3xl md:text-4xl text-blue-500 uppercase mb-2">
               SN-TOOLS
             </h2>
-            <p className="font-share text-sm text-ink uppercase tracking-widest mb-8">
-              <span className="relative inline-block before:absolute before:-left-8 before:top-1/2 before:-translate-y-1/2 before:w-5 before:h-px before:bg-muted-2 after:absolute after:-right-8 after:top-1/2 after:-translate-y-1/2 after:w-5 after:h-px after:bg-muted-2">
+            <p className="font-share text-sm text-white uppercase tracking-widest mb-8">
+              <span className="relative inline-block before:absolute before:-left-8 before:top-1/2 before:-translate-y-1/2 before:w-5 before:h-px before:bg-white/40 after:absolute after:-right-8 after:top-1/2 after:-translate-y-1/2 after:w-5 after:h-px after:bg-white/40">
                 Aqui tienes unas recomendaciones de sitios (propios) de nuestras
                 SN-TOOLS
               </span>

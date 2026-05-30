@@ -9,7 +9,7 @@ export const team = [
   {
     name: "Thempher09",
     role: "Ing System Junior",
-    img: "/img/sauce2.jpg",
+    img: "/img/sauce.jpg",
     bio: "Experto en moderación de plataformas como Telegram y WhatsApp y ciberseguridad.",
     github: "https://github.com/Themper09",
   },
@@ -21,9 +21,9 @@ export const team = [
     github: "https://github.com",
   },
   {
-    name: "Contribuidor 2",
+    name: "mya-nee",
     role: "Colaborador",
-    img: "/img/ruko.jpeg",
+    img: "/img/Pablo.jpg",
     bio: "Descripción del contribuidor.",
     github: "https://github.com",
   },

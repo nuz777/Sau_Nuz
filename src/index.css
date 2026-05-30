@@ -60,6 +60,20 @@ html.light {
   }
 }
 
+@keyframes spin-ease {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+.animate-spin-slow {
+  will-change: transform;
+  animation: spin-ease 3s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
 @keyframes fadeUp {
   to {
     opacity: 1;

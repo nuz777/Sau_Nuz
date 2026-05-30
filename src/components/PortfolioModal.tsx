@@ -71,7 +71,7 @@ export default function PortfolioModal({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-overlay backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -85,11 +85,11 @@ export default function PortfolioModal({
           tabIndex={0}
         >
           <motion.div
-            className="relative w-[92vw] max-w-4xl max-h-[90vh] overflow-y-auto bg-black/40 backdrop-blur-lg p-4 md:p-8 rounded-2xl shadow-2xl border border-zinc-800"
+            className="relative w-[92vw] max-w-4xl max-h-[90vh] overflow-y-auto bg-surface/40 backdrop-blur-lg p-4 md:p-8 rounded-2xl shadow-2xl border border-border"
             initial={{ opacity: 0, scale: isMobile ? 0.95 : 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: isMobile ? 0.95 : 0.8, y: 20 }}
-            transition={{ duration: isMobile ? 0.2 : 0.4 }}
+            transition={{ type: "spring", stiffness: 200, damping: 22, mass: 0.8 }}
           >
             <button
               onClick={onClose}
@@ -102,7 +102,7 @@ export default function PortfolioModal({
               <motion.div
                 initial={{ opacity: 0, x: isMobile ? 0 : -30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0 : 0.2 }}
+                transition={{ type: "spring", stiffness: 180, damping: 20, delay: isMobile ? 0 : 0.2 }}
                 className="flex justify-center"
               >
                 <div className="relative w-40 h-40 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl">
@@ -120,7 +120,7 @@ export default function PortfolioModal({
               <motion.div
                 initial={{ opacity: 0, x: isMobile ? 0 : 30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0 : 0.3 }}
+                transition={{ type: "spring", stiffness: 180, damping: 20, delay: isMobile ? 0 : 0.3 }}
                 className="space-y-4 md:space-y-6"
               >
                 <div>
