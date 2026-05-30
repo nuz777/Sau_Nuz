@@ -26,7 +26,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
           }}
         >
           <motion.div
-            className="relative w-[92vw] max-w-[750px] max-h-[85vh] overflow-y-auto bg-black/90 p-6 rounded-2xl shadow-2xl"
+            className="relative w-[92vw] max-w-[750px] max-h-[85vh] overflow-y-auto bg-black/80 p-6 rounded-2xl shadow-2xl"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
@@ -34,7 +34,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
           >
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 text-blue-500 hover:text-blue-300 z-10"
+              className="absolute top-4 right-4 text-white hover:text-blue-300 z-10"
             >
               <X size={28} />
             </button>

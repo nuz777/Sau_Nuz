@@ -15,6 +15,7 @@ export default function Games() {
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState<Game | null>(null);
   const [page, setPage] = useState(0);
+  const [showInfoModal, setShowInfoModal] = useState(true);
 
   const GAMES_PER_PAGE = 12;
 
@@ -46,7 +47,7 @@ export default function Games() {
 
   return (
     <main className="min-h-screen bg-zinc-950 text-white flex flex-col">
-      <InfoModal />
+      <InfoModal messageId={showInfoModal ? "info-games" : null} onClose={() => setShowInfoModal(false)} />
       <SubpageHeader
         title="Games"
         navLinks={navLinks}

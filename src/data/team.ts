@@ -23,7 +23,7 @@ export const team = [
   {
     name: "Contribuidor 2",
     role: "Colaborador",
-    img: "/img/placeholder2.jpg",
+    img: "/img/ruko.jpeg",
     bio: "Descripción del contribuidor.",
     github: "https://github.com",
   },

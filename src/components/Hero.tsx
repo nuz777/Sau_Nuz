@@ -23,7 +23,7 @@ export default function Hero() {
       {/* Mobile fallback image */}
       <div
         className="mobile-bg absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url(/img/ryo.jpg)", zIndex: 2 }}
+        style={{ backgroundImage: "url(/img/celular.jpeg)", zIndex: 2 }}
       />
 
       {/* Single dark overlay */}
@@ -33,7 +33,7 @@ export default function Hero() {
         <h1 className="typing-animate font-share font-bold text-4xl md:text-5xl text-blue-200 inline-block overflow-hidden whitespace-nowrap border-r-3 border-blue-400">
           &lt; Saunuz Tools /&gt;
         </h1>
-        <p className="font-share text-zinc-10 mt-8 text-sm md:text-base uppercase tracking-wide opacity-0 animate-[fadeUp_1s_ease_0.6s_forwards]">
+        <p className="font-share text-white mt-8 text-sm md:text-base uppercase tracking-wide opacity-0 animate-[fadeUp_1s_ease_0.6s_forwards]">
           Hecho por Nuz_v &amp; Thempher09.
         </p>
       </div>

@@ -78,13 +78,13 @@ export default function TeamCard({ name, role, img, bio, github }: TeamCardProps
                 setFlipped(false);
                 setTimeout(() => handleImageClick(), 300);
               }}
-              className="relative group cursor-pointer overflow-hidden rounded-lg"
+              className="relative group cursor-pointer overflow-hidden rounded-full"
             >
               <img
                 src={img}
                 alt={name}
                 role={role}
-                className="w-full h-[260px] object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-[260px] object-cover rounded-full transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0  group-hover:bg-black/60 transition-colors duration-300 flex items-center justify-center">
                 <span className="text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -107,7 +107,7 @@ export default function TeamCard({ name, role, img, bio, github }: TeamCardProps
                   setTimeout(() => handleImageClick(), 300);
                 }
               }}
-              className="text-center mt-4 font-semibold text-white block cursor-pointer"
+              className="text-center mt-4 font-semibold text-ink block cursor-pointer"
             >
               {name}
             </span>
@@ -119,7 +119,7 @@ export default function TeamCard({ name, role, img, bio, github }: TeamCardProps
               backfaceVisibility: "hidden",
               transform: "rotateY(180deg)",
             }}
-            className="absolute inset-0 bg-[#0f1e3a] text-white text-center rounded-xl p-5 flex items-center"
+            className="absolute inset-0 bg-surface-elevated text-ink text-center rounded-xl p-5 flex items-center"
           >
             <div className="w-full">
               <h3 className="text-xl font-semibold mb-1">{name}</h3>
@@ -132,7 +132,7 @@ export default function TeamCard({ name, role, img, bio, github }: TeamCardProps
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
-                  className="inline-flex items-center justify-center size-8 border border-zinc-400 rotate-45 hover:bg-white hover:text-blue-500 transition-all"
+                  className="inline-flex items-center justify-center size-8 border border-border rotate-45 hover:bg-surface-hover hover:text-blue-500 transition-all"
                 >
                   <GithubIcon size={14} className="-rotate-45" />
                 </a>

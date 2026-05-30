@@ -52,7 +52,7 @@ export default function SubpageHeader({
                   key={link.href}
                   href={link.href}
                   download
-                  className="text-blue-200/70 hover:text-white text-sm px-3 py-1.5 rounded-lg hover:bg-blue-900/15 transition"
+                  className="text-blue-200/70 hover:text-ink text-sm px-3 py-1.5 rounded-lg hover:bg-blue-900/15 transition"
                 >
                   {link.label}
                 </a>
@@ -60,7 +60,7 @@ export default function SubpageHeader({
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-blue-200/70 hover:text-white text-sm px-3 py-1.5 rounded-lg hover:bg-blue-900/15 transition"
+                  className="text-blue-200/70 hover:text-ink text-sm px-3 py-1.5 rounded-lg hover:bg-blue-900/15 transition"
                 >
                   {link.label}
                 </Link>
@@ -103,7 +103,7 @@ export default function SubpageHeader({
         }`}
       >
         <div className="flex items-center justify-between px-5 h-16 border-b border-blue-900/20">
-          <span className="text-white text-sm uppercase tracking-wider">Menú</span>
+          <span className="text-ink text-sm uppercase tracking-wider">Menú</span>
           <button
             onClick={() => setSidebarOpen(false)}
             className="text-blue-500 p-1"
@@ -121,7 +121,7 @@ export default function SubpageHeader({
                 href={link.href}
                 download
                 onClick={handleNavClick}
-                className="px-6 py-3.5 text-sm text-blue-200/70 hover:text-white hover:bg-blue-900/10 border-l-2 border-transparent hover:border-blue-500 transition-all"
+                className="px-6 py-3.5 text-sm text-blue-200/70 hover:text-ink hover:bg-blue-900/10 border-l-2 border-transparent hover:border-blue-500 transition-all"
               >
                 {link.label}
               </a>
@@ -130,7 +130,7 @@ export default function SubpageHeader({
                 key={link.href}
                 href={link.href}
                 onClick={handleNavClick}
-                className="px-6 py-3.5 text-sm text-blue-200/70 hover:text-white hover:bg-blue-900/10 border-l-2 border-transparent hover:border-blue-500 transition-all"
+                className="px-6 py-3.5 text-sm text-blue-200/70 hover:text-ink hover:bg-blue-900/10 border-l-2 border-transparent hover:border-blue-500 transition-all"
               >
                 {link.label}
               </Link>

@@ -31,7 +31,7 @@ export default function YouTubeEmbed({ videoId }: { videoId: string }) {
   }, []);
 
   return (
-    <div ref={sectionRef} className="relative aspect-video bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
+    <div ref={sectionRef} className="relative aspect-video bg-surface border border-border rounded-xl overflow-hidden">
       <iframe
         ref={iframeRef}
         className="absolute inset-0 size-full"

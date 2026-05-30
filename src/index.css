@@ -7,6 +7,38 @@
   --font-syne: "Syne", sans-serif;
   --font-space: "Space Mono", monospace;
   --font-ibm: "IBM Plex Mono", monospace;
+
+  --color-canvas: #070707;
+  --color-surface: #000000;
+  --color-surface-elevated: #0a0a0a;
+  --color-surface-hover: #111111;
+  --color-surface-soft: rgba(255, 255, 255, 0.05);
+  --color-ink: #ffffff;
+  --color-ink-secondary: #a1a1aa;
+  --color-muted: #71717a;
+  --color-muted-2: #52525b;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-accent: rgba(59, 130, 246, 0.3);
+  --color-accent-soft: rgba(59, 130, 246, 0.1);
+  --color-overlay: rgba(0, 0, 0, 0.6);
+  --color-diamond-shadow: #ddd;
+}
+
+html.light {
+  --color-canvas: #f5f5f5;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+  --color-surface-hover: #eeeeee;
+  --color-surface-soft: rgba(0, 0, 0, 0.04);
+  --color-ink: #1e1e2e;
+  --color-ink-secondary: #52525b;
+  --color-muted: #71717a;
+  --color-muted-2: #a1a1aa;
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-border-accent: rgba(59, 130, 246, 0.3);
+  --color-accent-soft: rgba(59, 130, 246, 0.08);
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-diamond-shadow: #bbb;
 }
 
 @keyframes typing {
@@ -74,8 +106,8 @@
 .typing-animate {
   width: 0;
   animation:
-    typing 2.8s steps(30, end) forwards,
-    blink 0.7s step-end infinite;
+    typing 1.8s linear forwards,
+    blink 0.7s ease-in-out infinite;
 }
 
 .hero-arrow-bounce {
