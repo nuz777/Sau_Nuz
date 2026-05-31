@@ -12,6 +12,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Link } from "wouter";
+import { AnimatePresence, motion } from "motion/react";
 import Hero from "../components/Hero";
 import TeamCard from "../components/TeamCard";
 import InfoModal from "../components/InfoModal";
@@ -113,6 +114,24 @@ function Carousel() {
 }
 
 export default function Home() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [showMusicMsg, setShowMusicMsg] = useState(false);
+
+  function toggleAudio() {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (audio.paused) {
+      audio.play();
+      setShowMusicMsg(true);
+      setTimeout(() => setShowMusicMsg(false), 2500);
+    } else {
+      audio.pause();
+    }
+  }
+
+  function pauseAudio() {
+    audioRef.current?.pause();
+  }
   const [modalId, setModalId] = useState<string | null>(null);
   const seen = useRef(new Set<string>());
   const toolsRef = useRef<HTMLDivElement>(null);
@@ -230,8 +249,26 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex justify-center items-center py-8">
-                <div className="relative size-57.5 shadow-[10px_10px_0_0_transparent] animate-spin-slow">
+              <div className="flex flex-col items-center md:-mt-16 relative">
+                <div className="h-10 flex items-center justify-center">
+                  <AnimatePresence>
+                    {showMusicMsg && (
+                      <motion.span
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-xs md:text-sm text-blue-400 font-share uppercase tracking-widest"
+                      >
+                        ¡Musica Desbloqueada!
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
+                </div>
+                <div
+                  className="relative size-57.5 shadow-[10px_10px_0_0_transparent] animate-spin-slow cursor-pointer"
+                  onClick={toggleAudio}
+                >
                   <img
                     src="/img/icon12.png"
                     alt="Code"
@@ -382,7 +419,7 @@ export default function Home() {
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              <YouTubeEmbed videoId="i2Q08d67oRs" />
+              <YouTubeEmbed videoId="-XraHbRlwwo" onPlay={pauseAudio} />
 
               <div className="space-y-6">
                 <h3 className="font-share text-2xl md:text-3xl text-ink uppercase">
@@ -426,6 +463,8 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      <audio ref={audioRef} src="/audio/mussicSong.mp3" loop preload="auto" />
     </>
   );
 }

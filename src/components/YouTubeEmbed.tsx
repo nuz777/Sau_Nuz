@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function YouTubeEmbed({ videoId }: { videoId: string }) {
+export default function YouTubeEmbed({ videoId, onPlay }: { videoId: string; onPlay?: () => void }) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -19,6 +19,7 @@ export default function YouTubeEmbed({ videoId }: { videoId: string }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           postMessage("playVideo");
+          onPlay?.();
         } else {
           postMessage("pauseVideo");
         }
