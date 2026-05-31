@@ -19,7 +19,7 @@ export default function GameCard({ game, onClick }: GameCardProps) {
       <img
         src={game.img}
         alt={game.title}
-        className="w-full h-[250px] object-cover rounded-lg mb-2"
+        className="w-full h-62.5 object-cover rounded-lg mb-2"
         loading="lazy"
       />
       <h3 className="text-white font-semibold text-sm">{game.title}</h3>

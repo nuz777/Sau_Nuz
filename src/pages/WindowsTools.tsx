@@ -66,7 +66,7 @@ export default function WindowsTools() {
                   <img
                     src={w.img}
                     alt={w.title}
-                    className="w-full h-[250px] object-cover object-center rounded-lg mb-2"
+                    className="w-full h-62.5 object-cover object-center rounded-lg mb-2"
                     loading="lazy"
                   />
                   <h3 className="text-white font-semibold text-sm">{w.title}</h3>
@@ -100,50 +100,55 @@ export default function WindowsTools() {
 
       <Modal isOpen={!!selected} onClose={() => setSelected(null)}>
         {selected && (
-          <div>
+          <div className="pt-5 flex flex-col sm:flex-row gap-8">
             <img
               src={selected.img}
               alt={selected.title}
-              className="w-full h-78 object-cover rounded-xl mb-4"
+              className="w-full h-auto max-h-[70vh] object-cover rounded-xl md:w-2/5"
             />
-            <h2 className="text-xl font-semibold text-white mb-1">{selected.title}</h2>
-            <p className="text-zinc-400 text-sm mb-3">{selected.desc}</p>
-            <p className="text-zinc-300 text-sm mb-4">
-              <strong className="text-white">Peso:</strong> {selected.size}
-            </p>
 
-            {/* Requisitos */}
-            <div className="grid grid-cols-2 gap-3 mb-4">
-              <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-3">
-                <p className="text-xs text-zinc-500 uppercase tracking-widest mb-2">Mínimos</p>
-                <p
-                  className="text-zinc-300 text-xs leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: selected.minReq }}
-                />
-              </div>
-              <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-3">
-                <p className="text-xs text-zinc-500 uppercase tracking-widest mb-2">Recomendados</p>
-                <p
-                  className="text-zinc-300 text-xs leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: selected.recReq }}
-                />
-              </div>
-            </div>
-
-            {selected.password && (
-              <p className="text-yellow-500 text-sm mb-4">
-                <strong>Contraseña:</strong> {selected.password}
+            <div className="md:col-start-2 md:w-3/5">
+              <h2 className="text-xl font-semibold text-white mb-2">{selected.title}</h2>
+              <p className="text-zinc-400 text-sm mb-2">{selected.desc}</p>
+              <p className="text-white text-sm font-semibold mb-4">
+                <strong>Peso:</strong> {selected.size}
               </p>
-            )}
 
-            <a
-              href={selected.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm transition"
-            >
-              Descargar
-            </a>
+              <div className="border-t border-zinc-800 pt-4">
+                <p className="text-xs font-semibold text-blue-500 uppercase tracking-wider mb-2">
+                  ⚙ Requisitos del sistema
+                </p>
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="bg-[#0a0a0a] border border-zinc-800 rounded-lg p-3">
+                    <p className="text-xs text-zinc-500 uppercase mb-1">Mínimos</p>
+                    <p className="text-xs text-zinc-500 leading-relaxed whitespace-pre-line">
+                      {selected.minReq.replace(/<br\s*\/?>/gi, "\n")}
+                    </p>
+                  </div>
+                  <div className="bg-[#0a0a0a] border border-zinc-800 rounded-lg p-3">
+                    <p className="text-xs text-blue-500 uppercase mb-1">Recomendados</p>
+                    <p className="text-xs text-zinc-500 leading-relaxed whitespace-pre-line">
+                      {selected.recReq.replace(/<br\s*\/?>/gi, "\n")}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {selected.password && (
+                <p className="text-yellow-500 text-sm mt-4 mb-4">
+                  <strong>Contraseña:</strong> {selected.password}
+                </p>
+              )}
+
+              <a
+                href={selected.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm transition"
+              >
+                Descargar
+              </a>
+            </div>
           </div>
         )}
       </Modal>

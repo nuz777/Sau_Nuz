@@ -95,7 +95,7 @@ export default function PortfolioModal({
               onClick={onClose}
               className="absolute top-3 right-3 text-white hover:text-blue-300 z-10 transition"
             >
-              <X size={30} />
+              <X size={30} />  
             </button>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
@@ -112,7 +112,7 @@ export default function PortfolioModal({
                     className="w-full h-full object-cover"
                   />
                   {!isMobile && (
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
                   )}
                 </div>
               </motion.div>
@@ -128,7 +128,7 @@ export default function PortfolioModal({
                   <p className="text-lg md:text-xl text-zinc-400 font-semibold">{role}</p>
                 </div>
 
-                <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded" />
+                <div className="w-12 h-1 bg-linear-to-r from-blue-500 to-purple-500 rounded" />
 
                 <TypingEffect text={bio} delay={isMobile ? 0 : 500} />
 
