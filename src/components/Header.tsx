@@ -125,7 +125,7 @@ export default function Header({ onNavSectionClick }: HeaderProps) {
       />
 
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-64 bg-surface/50 backdrop-blur-xl border-l border-border-accent transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 z-50 h-full w-64 bg-surface/80 backdrop-blur-xl border-l border-border-accent transform transition-transform duration-300 ease-in-out md:hidden ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

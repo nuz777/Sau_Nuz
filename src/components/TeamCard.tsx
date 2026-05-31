@@ -59,7 +59,7 @@ export default function TeamCard({ name, role, img, bio, github }: TeamCardProps
             if (e.key === "Enter" || e.key === " ") setFlipped((f) => !f);
           }}
           role="button"
-          tabIndex={0}
+          tabIndex={0} 
           style={{
             transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
             transition: "transform 0.6s",

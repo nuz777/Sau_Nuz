@@ -18,7 +18,7 @@ export default function Programming() {
   const lang = selected ? languages.find((l) => l.id === selected) : null;
 
   return (
-    <main className="min-h-screen bg-zinc-950 text-white">
+    <main className="min-h-screen bg-zinc-950 text-white"> 
       <SubpageHeader
         title="Programming"
         navLinks={navLinks}

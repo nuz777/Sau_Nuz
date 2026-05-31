@@ -49,7 +49,7 @@ function TypingEffect({ text, delay = 0 }: { text: string; delay?: number }) {
   }, [text, delay]);
 
   return (
-    <p className="text-zinc-300 text-sm md:text-lg leading-relaxed">
+    <p className="text-white text-sm md:text-lg leading-relaxed">
       {displayText}
       {!isComplete && <span className="animate-pulse">|</span>}
     </p>
@@ -125,7 +125,7 @@ export default function PortfolioModal({
               >
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold text-blue-500 mb-2">{name}</h2>
-                  <p className="text-lg md:text-xl text-zinc-400 font-semibold">{role}</p>
+                  <p className="text-lg md:text-xl text-white font-semibold">{role}</p>
                 </div>
 
                 <div className="w-12 h-1 bg-linear-to-r from-blue-500 to-purple-500 rounded" />
