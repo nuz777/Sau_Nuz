@@ -72,9 +72,9 @@ export default function PortfolioModal({
       {isOpen && (
         <motion.div
           className="fixed inset-0 z-50 flex items-center justify-center bg-overlay backdrop-blur-sm"
-          initial={{ opacity: 0 }}
+          initial={isMobile ? { opacity: 1 } : { opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          exit={isMobile ? undefined : { opacity: 0 }}
           onClick={(e) => {
             if (e.target === e.currentTarget) onClose();
           }}
@@ -86,10 +86,10 @@ export default function PortfolioModal({
         >
           <motion.div
             className="relative w-[92vw] max-w-4xl max-h-[90vh] overflow-y-auto bg-surface/40 backdrop-blur-lg p-4 md:p-8 rounded-2xl shadow-2xl border border-border"
-            initial={{ opacity: 0, scale: isMobile ? 0.95 : 0.8, y: 20 }}
+            initial={isMobile ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: isMobile ? 0.95 : 0.8, y: 20 }}
-            transition={{ type: "spring", stiffness: 200, damping: 22, mass: 0.8 }}
+            exit={isMobile ? undefined : { opacity: 0, scale: 0.8, y: 20 }}
+            transition={isMobile ? { duration: 0 } : { type: "spring", stiffness: 200, damping: 22, mass: 0.8 }}
           >
             <button
               onClick={onClose}
@@ -100,9 +100,9 @@ export default function PortfolioModal({
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
               <motion.div
-                initial={{ opacity: 0, x: isMobile ? 0 : -30 }}
+                initial={isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ type: "spring", stiffness: 180, damping: 20, delay: isMobile ? 0 : 0.2 }}
+                transition={isMobile ? { duration: 0 } : { type: "spring", stiffness: 180, damping: 20, delay: 0.2 }}
                 className="flex justify-center"
               >
                 <div className="relative w-40 h-40 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl">
@@ -118,9 +118,9 @@ export default function PortfolioModal({
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: isMobile ? 0 : 30 }}
+                initial={isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ type: "spring", stiffness: 180, damping: 20, delay: isMobile ? 0 : 0.3 }}
+                transition={isMobile ? { duration: 0 } : { type: "spring", stiffness: 180, damping: 20, delay: 0.3 }}
                 className="space-y-4 md:space-y-6"
               >
                 <div>
