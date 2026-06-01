@@ -129,9 +129,6 @@ export default function Home() {
     }
   }
 
-  function pauseAudio() {
-    audioRef.current?.pause();
-  }
   const [modalId, setModalId] = useState<string | null>(null);
   const seen = useRef(new Set<string>());
   const toolsRef = useRef<HTMLDivElement>(null);
@@ -419,11 +416,11 @@ export default function Home() {
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              <YouTubeEmbed videoId="-XraHbRlwwo" onPlay={pauseAudio} />
+              <YouTubeEmbed videoId="-XraHbRlwwo" />
 
               <div className="space-y-6">
                 <h3 className="font-share text-2xl md:text-3xl text-ink uppercase">
-                  Sé bienvenido a <span className="text-blue-500">Sau-nuz</span>, tu destino para herramientas y juegos.
+                  Sé bienvenido a <span className="text-blue-500">Sau-nuz</span>, tu destino para herramientas.
                 </h3>
                 <p className="text-sm text-ink-secondary leading-relaxed">
                  Una pequeña introduccion a lo que es este sitio, sus funciones y como usarlo, 
@@ -451,9 +448,7 @@ export default function Home() {
               Estaremos atentos ante cualquier inconveniente.
             </p>
             <a
-              href="https://mail.google.com/mail/?view=cm&to=ivandavidmejiamendez@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:ivandavidmejiamendez@gmail.com"
               className="inline-flex items-center h-11 px-4 bg-blue-500 text-white text-sm uppercase tracking-wide border border-blue-500 hover:bg-transparent hover:border-white transition-all"
             >
               Contactar

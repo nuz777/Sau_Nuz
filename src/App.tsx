@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Tools from "./pages/Tools";
 import Programming from "./pages/Programming";
 import WindowsTools from "./pages/WindowsTools";
-import Games from "./pages/Games";
 import LoadingScreen from "./components/LoadingScreen";
 
 const HERO_IMAGES = [
@@ -64,9 +63,6 @@ export default function App() {
           </Route>
           <Route path="/tools/windows">
             <WindowsTools />
-          </Route>
-          <Route path="/tools/games">
-            <Games />
           </Route>
         </motion.div>
       )}

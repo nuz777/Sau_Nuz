@@ -17,7 +17,7 @@ export const team = [
     name: "Gaseosa con pan",
     role: "Colaborador",
     img: "/img/gaseosa.jpeg",
-    bio: "Apoyó en juegos android.",
+    bio: "Colaborador en proyectos android.",
     github: "https://github.com",
   },
   {
@@ -25,6 +25,13 @@ export const team = [
     role: "Colaborador",
     img: "/img/Pablo.jpg",
     bio: "Descripción del contribuidor.",
+    github: "https://github.com",
+  },
+  {
+    name: "Vikala Tanezaki",
+    role: "Programador",
+    img: "/img/vikala.jpeg",
+    bio: "Aportó en programación y creación de SuperTools.",
     github: "https://github.com",
   },
 
