@@ -14,7 +14,7 @@ export const toolCategories: ToolCategory[] = [
     desc: "Recursos, guías y tutoriales para iniciarte o mejorar tus habilidades de desarrollo web.",
     badge: "Web Design",
     num: "01",
-    route: "https://supertools-k.vercel.app/",
+    route: "https://supertools-k.vercel.app/games",
   },
   {
     title: "Herramientas Windows",

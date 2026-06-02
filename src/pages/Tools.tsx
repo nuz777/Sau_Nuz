@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { toolCategories } from "../data/toolsCategories";
 import RedirectScreen from "../components/RedirectScreen";
 
 export default function Tools() {
   const [redirect, setRedirect] = useState<string | null>(null);
+
+  useEffect(() => {
+    const onPageShow = (e: PageTransitionEvent) => {
+      if (e.persisted) setRedirect(null);
+    };
+    window.addEventListener("pageshow", onPageShow);
+    return () => window.removeEventListener("pageshow", onPageShow);
+  }, []);
 
   const handleExternalClick = (url: string) => {
     setRedirect(url);
@@ -80,7 +88,7 @@ export default function Tools() {
                       Ver recursos
                     </span>
                   </div>
-                </div>
+                </div>   
               ) : (
                 <Link
                   {...commonProps}
