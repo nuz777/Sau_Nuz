@@ -43,5 +43,5 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
         </motion.div>
       )}
     </AnimatePresence>
-  );
+  ); 
 }
