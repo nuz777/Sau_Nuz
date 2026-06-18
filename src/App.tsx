@@ -6,6 +6,7 @@ import Tools from "./pages/Tools";
 import Programming from "./pages/Programming";
 import WindowsTools from "./pages/WindowsTools";
 import LoadingScreen from "./components/LoadingScreen";
+import ChatWidget from "./components/ChatWidget";
 
 const HERO_IMAGES = [
   "/hero/yui.png",
@@ -64,6 +65,7 @@ export default function App() {
           <Route path="/tools/windows">
             <WindowsTools />
           </Route>
+          <ChatWidget />
         </motion.div>
       )}
     </AnimatePresence>
