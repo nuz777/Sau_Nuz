@@ -23,7 +23,7 @@ export default function Hero() {
       {/* Mobile fallback image */}
       <div
         className="mobile-bg absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url(/img/celular.jpeg)", zIndex: 2 }}
+        style={{ backgroundImage: "url(/img/ryoya.jpg)", zIndex: 2 }}
       />
 
       {/* Single dark overlay */}

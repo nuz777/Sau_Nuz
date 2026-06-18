@@ -117,6 +117,21 @@ html.light {
   }
 }
 
+@keyframes wave-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.animate-wave-ring {
+  animation: wave-ring 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
 .typing-animate {
   width: 0;
   animation:

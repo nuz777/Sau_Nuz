@@ -7,6 +7,7 @@ import Programming from "./pages/Programming";
 import WindowsTools from "./pages/WindowsTools";
 import LoadingScreen from "./components/LoadingScreen";
 import ChatWidget from "./components/ChatWidget";
+import { AudioProvider } from "./AudioContext";
 
 const HERO_IMAGES = [
   "/hero/yui.png",
@@ -56,6 +57,7 @@ export default function App() {
           transition={{ duration: 0.5 }}
           className="min-h-screen bg-zinc-950 text-white"
         >
+          <AudioProvider>
           <Route path="/" component={Home} />
           <Route path="/tools">
             <Tools />
@@ -67,6 +69,7 @@ export default function App() {
             <WindowsTools />
           </Route>
           <ChatWidget />
+          </AudioProvider>
         </motion.div>
       )}
     </AnimatePresence>

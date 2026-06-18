@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Calendar,
   MessageCircle,
@@ -17,22 +17,20 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import YouTubeEmbed from "../components/YouTubeEmbed";
 import Reveal from "../components/Reveal";
+import { useAudio } from "../AudioContext";
 
 export default function Home() {
-  const audioRef = useRef<HTMLAudioElement>(null);
   const [showMusicMsg, setShowMusicMsg] = useState(false);
+  const { isPlaying, toggleAudio, intensity } = useAudio();
+  const prevPlaying = useRef(false);
 
-  function toggleAudio() {
-    const audio = audioRef.current;
-    if (!audio) return;
-    if (audio.paused) {
-      audio.play();
+  useEffect(() => {
+    if (isPlaying && !prevPlaying.current) {
       setShowMusicMsg(true);
       setTimeout(() => setShowMusicMsg(false), 2500);
-    } else {
-      audio.pause();
     }
-  }
+    prevPlaying.current = isPlaying;
+  }, [isPlaying]);
 
   return (
     <>
@@ -99,15 +97,33 @@ export default function Home() {
                         )}
                       </AnimatePresence>
                     </div>
-                    <div
-                      className="relative size-57.5 shadow-[10px_10px_0_0_transparent] animate-spin-slow cursor-pointer"
-                      onClick={toggleAudio}
-                    >
-                      <img
-                        src="/img/icon12.png"
-                        alt="Code"
-                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 w-48 md:w-56"
-                      />
+                    <div className="relative">
+                      <AnimatePresence>
+                        {isPlaying && (
+                          <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="absolute inset-0 flex items-center justify-center"
+                          >
+                            <div className="absolute size-57.5 rounded-full border-2 animate-wave-ring" style={{ animationDelay: "0s", borderColor: `rgba(56,189,248,${0.15 + intensity * 0.85})` }} />
+                            <div className="absolute size-57.5 rounded-full border-2 animate-wave-ring" style={{ animationDelay: "0.6s", borderColor: `rgba(56,189,248,${0.15 + intensity * 0.85})` }} />
+                            <div className="absolute size-57.5 rounded-full border-2 animate-wave-ring" style={{ animationDelay: "1.2s", borderColor: `rgba(56,189,248,${0.15 + intensity * 0.85})` }} />
+                            <div className="absolute size-57.5 rounded-full border-2 animate-wave-ring" style={{ animationDelay: "1.8s", borderColor: `rgba(56,189,248,${0.15 + intensity * 0.85})` }} />
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                      <div
+                        className="relative size-57.5 shadow-[10px_10px_0_0_transparent] animate-spin-slow cursor-pointer"
+                        onClick={toggleAudio}
+                      >
+                        <img
+                          src="/img/icon12.png"
+                          alt="Code"
+                          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 w-48 md:w-56"
+                        />
+                      </div>
                     </div>
                   </div>
                 </Reveal>
@@ -317,8 +333,6 @@ export default function Home() {
       </main>
 
       <Footer />
-
-      <audio ref={audioRef} src="/audio/whatsapp-audio.m4a" loop preload="auto" />
     </>
   );
 }
