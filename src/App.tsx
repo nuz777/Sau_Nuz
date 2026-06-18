@@ -33,7 +33,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const MIN_TIME = 1500;
+    const MIN_TIME = 3000;
     const start = Date.now();
 
     preloadImages(HERO_IMAGES).then(() => {
