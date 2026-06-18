@@ -33,7 +33,8 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const MIN_TIME = 3000;
+    const isMobile = window.innerWidth < 768;
+    const MIN_TIME = isMobile ? 5000 : 3000;
     const start = Date.now();
 
     preloadImages(HERO_IMAGES).then(() => {
