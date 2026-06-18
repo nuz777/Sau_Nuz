@@ -170,7 +170,7 @@ export default function TeamTerminal() {
                     initial={{ opacity: 0, x: -12 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
-                    onClick={() => openMember(line.member)}
+                    onClick={(e) => { e.stopPropagation(); openMember(line.member); }}
                     className="text-blue-300/90 hover:text-cyan-300 cursor-pointer transition-colors"
                   >
                     <span className="text-muted">drwxr-x---  </span>
