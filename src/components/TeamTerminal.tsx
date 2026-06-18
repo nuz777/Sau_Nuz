@@ -67,6 +67,7 @@ export default function TeamTerminal() {
   const focusInput = () => inputRef.current?.focus();
 
   const openMember = (member: Member) => {
+    inputRef.current?.blur();
     setSelectedMember(member);
   };
 
@@ -198,7 +199,6 @@ export default function TeamTerminal() {
                 disabled={locked}
                 className="flex-1 bg-transparent border-none outline-none text-blue-300 font-share text-sm p-0 caret-blue-400 placeholder:text-muted-2 disabled:cursor-not-allowed"
                 placeholder={locked ? "terminal bloqueada" : "escribe 'ls' para listar miembros..."}
-                autoFocus
                 spellCheck={false}
                 autoComplete="off"
               />
