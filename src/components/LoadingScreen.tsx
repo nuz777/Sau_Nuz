@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 export default function LoadingScreen() {
   return (
     <motion.div
-      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#070707]"
+      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#070707] transform-gpu"
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
