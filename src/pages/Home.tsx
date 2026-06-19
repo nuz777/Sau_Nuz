@@ -107,10 +107,10 @@ export default function Home() {
                             transition={{ duration: 0.3 }}
                             className="absolute inset-0 flex items-center justify-center"
                           >
-                            <div className="absolute size-57.5 rounded-full border-2 animate-wave-ring" style={{ animationDelay: "0s", borderColor: `rgba(56,189,248,${0.15 + intensity * 0.85})` }} />
-                            <div className="absolute size-57.5 rounded-full border-2 animate-wave-ring" style={{ animationDelay: "0.6s", borderColor: `rgba(56,189,248,${0.15 + intensity * 0.85})` }} />
-                            <div className="absolute size-57.5 rounded-full border-2 animate-wave-ring" style={{ animationDelay: "1.2s", borderColor: `rgba(56,189,248,${0.15 + intensity * 0.85})` }} />
-                            <div className="absolute size-57.5 rounded-full border-2 animate-wave-ring" style={{ animationDelay: "1.8s", borderColor: `rgba(56,189,248,${0.15 + intensity * 0.85})` }} />
+                            <div className="max-md:hidden absolute size-57.5 rounded-full border-2 animate-wave-ring" style={{ animationDelay: "0s", borderColor: `rgba(56,189,248,${0.15 + intensity * 0.85})` }} />
+                            <div className="max-md:hidden absolute size-57.5 rounded-full border-2 animate-wave-ring" style={{ animationDelay: "0.6s", borderColor: `rgba(56,189,248,${0.15 + intensity * 0.85})` }} />
+                            <div className="max-md:hidden absolute size-57.5 rounded-full border-2 animate-wave-ring" style={{ animationDelay: "1.2s", borderColor: `rgba(56,189,248,${0.15 + intensity * 0.85})` }} />
+                            <div className="max-md:hidden absolute size-57.5 rounded-full border-2 animate-wave-ring" style={{ animationDelay: "1.8s", borderColor: `rgba(56,189,248,${0.15 + intensity * 0.85})` }} />
                           </motion.div>
                         )}
                       </AnimatePresence>
