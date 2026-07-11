@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { team } from "../data/team";
+import { games } from "../data/games";
 import PortfolioModal from "./PortfolioModal";
 
 interface Member {
@@ -94,8 +95,37 @@ export default function TeamTerminal() {
           setLines(prev => [...prev, { type: "member", member: m }]);
         }, i * 80);
       });
+    } else if (trimmed === "help" || trimmed === "comandos") {
+      addLine(`Comandos disponibles:`, "text-yellow-400");
+      addLine(`  ls / list        → Ver equipo`, "text-blue-300/90");
+      addLine(`  games / juegos   → Ver juegos disponibles`, "text-blue-300/90");
+      addLine(`  game-[nombre]    → Abrir un juego`, "text-blue-300/90");
+      addLine(`  clear            → Limpiar terminal`, "text-blue-300/90");
+    } else if (trimmed === "games" || trimmed === "juegos") {
+      const keys = Object.keys(games);
+      if (keys.length === 0) {
+        addLine(`No hay juegos configurados.`, "text-muted");
+        return;
+      }
+      addLine(`Juegos disponibles:`, "text-yellow-400");
+      keys.forEach((key) => {
+        addLine(`  game-${key}  →  ${games[key].name}`, "text-blue-300/90");
+      });
+    } else if (trimmed.startsWith("game-")) {
+      const gameKey = trimmed.slice(5);
+      const game = games[gameKey];
+      if (game) {
+        addLine(`Abriendo ${game.name}...`, "text-green-400");
+        setTimeout(() => window.open(game.url, "_blank"), 400);
+      } else {
+        addLine(`✖ Juego no encontrado: '${gameKey}'`, "text-red-400");
+        addLine(`Escribe 'games' para ver los disponibles.`, "text-muted");
+      }
+    } else if (trimmed === "clear") {
+      setLines([]);
     } else if (trimmed !== "") {
       addLine(`✖ Comando no encontrado: '${trimmed}'`, "text-red-400");
+      addLine(`Escribe 'help' para ver los comandos.`, "text-muted");
     }
   };
 
@@ -140,10 +170,10 @@ export default function TeamTerminal() {
               transition={{ duration: 0.4 }}
               className="text-blue-400 mb-2 whitespace-pre leading-tight"
             >
-{`╔═══════════════════════════════════════════╗
-║      SAUNUZ TEAM TERMINAL  v1.0         ║
-║   Escribe 'ls' para ver el equipo        ║
-╚═══════════════════════════════════════════╝`}
+{`╔═══════════════════════════════════════════════╗
+║        SAUNUZ TEAM TERMINAL  v1.1           ║
+║  'ls' equipo  ·  'games' juegos  ·  'help'  ║
+╚═══════════════════════════════════════════════╝`}
             </motion.div>
 
             {bootLine < bootTexts.length && bootChars && (
@@ -198,7 +228,7 @@ export default function TeamTerminal() {
                 onKeyDown={handleKeyDown}
                 disabled={locked}
                 className="flex-1 bg-transparent border-none outline-none text-blue-300 font-share text-sm p-0 caret-blue-400 placeholder:text-muted-2 disabled:cursor-not-allowed"
-                placeholder={locked ? "terminal bloqueada" : "escribe 'ls' para listar miembros..."}
+                placeholder={locked ? "terminal bloqueada" : "escribe 'help' para ver comandos..."}
                 spellCheck={false}
                 autoComplete="off"
               />
